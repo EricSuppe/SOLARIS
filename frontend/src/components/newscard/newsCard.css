@@ -1,0 +1,158 @@
+.article__container {
+    min-width: 300px;
+    max-width: 400px;
+    border: 3px solid rgb(51, 50, 50);
+    -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    overflow: hidden;
+}
+.article-container::before {
+    position: absolute;
+    content: '';
+    background-image: url("../../assets/Logo.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    background-color: #151515;
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+}
+.article-picture-container::before {
+    position: absolute;
+    content: '';
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    background-color: rgba(91, 88, 88, 0.423);
+    width: 50px;
+    height: 50px;
+    margin-left: 330px;
+    margin-top: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.article-picture-container::before:hover {
+    background-color: rgba(175, 49, 49, 0.423);
+}
+.article-container:hover > .article-picture-container .article-picture {
+    transform: scale(1.15);
+    opacity: .6;
+}
+.article-container:hover > .article-picture-container {
+    height: 200px;
+}
+.article-container:hover > .article-header .article-spoilerText {
+    opacity: 1;
+    height: 75px;
+}
+.article-container .article-picture-container {
+    height: 250px;
+    overflow: hidden;
+    background-color: #151515;
+}
+.article-container .article-picture-container .article-picture {
+    width: 100%;
+}
+.article-container .article-tags {
+    background-color: #151515;
+    padding: 5px 12.5px;
+    height: 0;
+}
+.article-container .article-tags .tag {
+    position: relative;
+    top: -20px;
+    background-color: #383434;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-primary);
+}   
+.article-container .article-header {
+    background-color: #151515;
+    padding: 20px 20px 0 20px;
+}
+.article-container .article-header .article-headline {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+.article-container .article-header .article-subHeadline {
+    color: rgb(229, 229, 229);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 25px 0 10px 0;
+}
+.article-container .article-header .article-spoilerText {
+    opacity: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 14px;
+    transition: all .3s ease, opacity .1s linear;
+}
+.article-container .article-header .article-spoilerText .spoilerBtn {
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    margin: 0 auto;
+    cursor: pointer;
+}
+.article-container .article-header .article-spoilerText .spoilerBtn:hover {
+    background-color: var(--color-primary);
+    color: whitesmoke;
+}
+.article-container .article-header .article-subContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0  0 5px 0;
+}
+.article-container .article-header .article-subContent .article-info {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.article-container .article-header .article-subContent .article-info .left,
+.article-container .article-header .article-subContent .article-info .right {
+    display: flex;
+    align-items: center;
+}
+.article-container .article-header .article-subContent .article-info .left .article-author {
+    display: flex;
+    align-items: center;
+    color: rgb(202, 202, 202);
+    font-size: 11px;
+    font-weight: 400;
+    padding: 5px 5px 5px 0;
+}
+.article-container .article-header .article-subContent .article-info .article-author span {
+    padding: 5px;
+}
+.article-container .article-header .article-subContent .article-info .article-date {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 5px;
+}
+.article-container .article-header .article-subContent .article-info .action {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+}
+.article-container .article-header .article-subContent .article-info .share:hover {
+    background-color: #383434;
+}

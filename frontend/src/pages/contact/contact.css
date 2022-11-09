@@ -1,0 +1,44 @@
+.contact {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black);
+}
+
+.contact .contact-container {
+    margin: 20vh auto;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(25, 24, 24);
+    overflow: hidden;
+}
+
+.contact .contact-container .contact-head {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    border-left: 4px solid var(--color-primary);
+    padding: 10px 25px;
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: clamp(1rem, 1rem + 1vw, 2rem);
+}
+
+.contact .contact-container .contact-body {
+    width: fit-content;
+    padding: 2vh 25px;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.contact .contact-container .contact-body h3 {
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+    padding: 20px 0;
+}

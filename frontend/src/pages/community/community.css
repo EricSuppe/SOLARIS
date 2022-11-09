@@ -1,0 +1,90 @@
+.community {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black);
+}
+
+.community .community-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 50px;
+    padding: 20vh 7.5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 800px) {
+    .community .community-wrapper {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 1400px ) {
+    .community .community-wrapper {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.community .community-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(25, 24, 24);
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.community .community-container:hover > .community-head {
+    transform: scale(1.25);
+}
+
+.community .community-container:hover > .community-body {
+    background-color: #434344;
+}
+
+.community .community-container:hover > .community-body span {
+    background-color: var(--color-primary);
+}
+
+.community .community-container .community-head {
+    object-fit: cover;
+    overflow: hidden;
+    height: 15vw;
+    width: auto;
+}
+
+.community .community-container .community-body {
+    background-color: #121212;
+    border-top: 4px solid var(--color-primary);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.community .community-container .community-body span {
+    margin: 5vh auto;
+    padding: 10px 25px;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+.community .community-container .community-body span p {
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: clamp(1rem, 1rem + 1vw, 1.75rem);
+    transform: skew(-10deg);
+    letter-spacing: 1px;
+}
+
+.community .community-container .community-body .desc {
+    margin: 0 auto;
+    text-align: center;
+    padding: 3vh 0;
+    width: 70%;
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: clamp(.75rem, .75rem + 1vw, 1rem);
+}

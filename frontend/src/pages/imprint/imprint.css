@@ -1,0 +1,35 @@
+.imprint {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.imprint .imprint-head {
+    padding: 15vh 7.5vw 0 7.5vw;
+}
+
+.imprint .imprint-head h1 {
+    color: var(--color-white);
+    font-size: clamp(1rem, 1rem + 2vw, 2.5rem);
+    font-weight: 800;
+}
+
+.imprint .imprint-content {
+    padding: 5vh 7.5vw;
+}
+
+.imprint .imprint-content h5 {
+    color: var(--color-white);
+    font-size: clamp(.75rem, .75rem + 2vw, 1.5rem);
+    font-weight: 600;
+    margin: 2vh 0;
+}
+
+.imprint .imprint-content p {
+    width: 90%;
+    max-width: 800px;
+    margin: 2vh 0;
+    color: gray;
+}

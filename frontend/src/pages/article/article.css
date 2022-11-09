@@ -1,0 +1,139 @@
+.article {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.article .head {
+    height: clamp(300px, 40vw, 1000px);
+    max-height: 625px;
+    object-fit: cover;
+    width: auto;
+    border-bottom: 3px solid var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article .head img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article .head span {
+    color: var(--color-primary);
+    font-size: clamp(1rem, 1rem + 4vw, 5vw);
+    font-weight: 900;
+    max-width: 80%;
+    text-align: center;
+}
+
+.article .body {
+    padding: 2vh 7.5vw;
+    background-color: var(--color-black);
+}
+
+.article .body article {
+    padding: 10px 0;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.article .body article .tag {
+    padding: 5px 10px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+.article .body article .path {
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+}
+
+.article .body article .path h5 {
+    padding: 0 10px;
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.article .body article .path h5:first-of-type {
+    border-right: 2px solid var(--color-white);
+    font-weight: 700;
+}
+
+.article .body article .info {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+@media (min-width: 400px) {
+    .article .body article .info {
+        flex-direction: row;
+    }
+}
+
+.article .body article .info div {
+    display: flex;
+    padding: 5px 10px;
+    border: 2px solid var(--color-primary);
+    margin: 0 20px 5px 0;
+}
+
+.article .body article .info div p {
+    color: var(--color-white);
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.article .body article .headline {
+    font-size: clamp(.5rem, .5rem + 4vw, 3rem);
+    color: var(--color-white);
+    font-weight: 800;
+    margin: 30px 0 ;
+}
+
+.article .body article img {
+    margin: 5vh auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article .body article .content {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.article .body article .content h4 {
+    font-size: clamp(.7rem, .7rem + 4vw, 2rem);
+    color: var(--color-white);
+    font-weight: 600;
+    width: fit-content;
+    margin: 40px 0 20px 0;
+    color: var(--color-primary);
+}
+
+.article .body article .content img {
+    width: fit-content;
+    margin: 2vh auto;
+}
+
+.article .body article .content p {
+    width: fit-content;
+    font-size: clamp(.3rem, .3rem + 4vw, 1.25rem);
+    color: var(--color-white);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 1000px) {
+    .article .body article .content p {
+        max-width: 70%;
+    }
+}

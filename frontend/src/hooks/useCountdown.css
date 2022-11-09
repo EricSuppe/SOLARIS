@@ -1,0 +1,31 @@
+.useCountdown {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+    align-items: center;
+} 
+
+@media (min-width: 500px) {
+    .useCountdown {
+        display: grid;
+        grid-template-columns: auto auto ; 
+    }
+}
+
+@media (min-width: 800px) {
+    .useCountdown {
+        grid-template-columns: auto auto auto auto; 
+    }
+}
+
+.useCountdown li {
+    list-style: none;
+}
+
+.useCountdown li span {
+    color: var(--color-black);
+    font-size: clamp(1rem, 1rem + 2vw, 2.5rem);
+    font-weight: 800;
+    padding: 0 2.5px;
+    text-align: center;
+}
