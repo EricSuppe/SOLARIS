@@ -14,8 +14,8 @@ import getSponsors from '../../static/sponsors.jsx';
 import getTeamMember from '../../static/teammember.jsx';
 
 import "./home.css"
-import NewsCard from '../../components/newscard/NewsCard.jsx';
-import { CircularProgress } from '@mui/material';
+// import NewsCard from '../../components/newscard/NewsCard.jsx';
+// import { CircularProgress } from '@mui/material';
 
 export default function Home() {
 
@@ -23,21 +23,21 @@ export default function Home() {
 
   const {user} = useContext(AuthContext);
   
-  const [news,setNews] = useState() 
+  // const [news,setNews] = useState() 
   const [time,setTime] = useState(new Date().getTime()) 
   
   const timer = useCountdown(new Date(time).getTime())
   
   useEffect(() => {
-    const fetchNews = async () => {
-      const response = await axios.put("/api/news/", {limit: 4})
-      setNews(response.data);      
-    }
+    // const fetchNews = async () => {
+    //   const response = await axios.put("/api/news/", {limit: 4})
+    //   setNews(response.data);      
+    // }
     const fetchTimer = async () => {
       const response = await axios.get("/api/timer/")
       setTime(response.data[0].time)     
     }
-    fetchNews();
+    // fetchNews();
     fetchTimer();
   },[])
 
@@ -94,13 +94,13 @@ export default function Home() {
             <button>Zeit Ändern</button>
           </form> : null}
         </section>
-        <section className='news background-pattern'>
+        {/* <section className='news background-pattern'>
           <div className="news-wrapper">
             {news ? news.map((news, index) => 
               NewsCard(news={news}, index={index})
             ) : <div><CircularProgress style={{color: "#ff5c00"}}/></div> }
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer/>
     </>
