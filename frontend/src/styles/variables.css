@@ -1,0 +1,12 @@
+:root {
+    --color-primary: #ff5c00;
+    --color-primary-hover: #ff5e00dc;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-admin: rgb(78, 78, 212);
+    --color-outline: rgb(57, 57, 57);
+
+    --background: #121212;
+    --background-hover: #27262698;
+    --background-admin: #1b1a1a;
+}

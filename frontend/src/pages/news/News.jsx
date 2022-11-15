@@ -70,66 +70,72 @@ export default function News() {
                 setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
                     {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 4, winner: null, result: [1,1], teams: [
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "PTO", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
-                setCardData(current => [...current,{type: "matchResult", day: 3, winner: 1, result: [0,2], teams: [
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
                     {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
-                    {name: "Eko Tyrants", tag: "SVG", symbol: "/images/Logo.svg"}]}])
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
+                    {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
+                setCardData(current => [...current,{type: "matchResult", day: 5, winner: 0, result: [2,0], teams: [
+                    {name: "Solaris", tag: "SLR", symbol: "/images/Logo.svg"},
+                    {name: "Eko Tyrants", tag: "EKO", symbol: "/images/Logo.svg"}]}])
             } catch(err) {
                 console.log(err);
             }         
@@ -142,12 +148,17 @@ export default function News() {
         {/* <Navbar/> */}
         <AdminSideBar tools={["sliderEditor"]} setEditMode={setEditMode}/>
         <div className='outer-wrapper'>
-            <section className="non-collapsible-section slider-wrapper" data-section-id="newsslider">
-                <Slider/>
+            <section className="collapsible-section slider-container section-layout-t" data-section-id="newsslider">
+                {cardData ? <Slider data={[cardData[0],cardData[0],cardData[0],cardData[0], cardData[1]]}/> : null}
             </section>
+            <section className='section-layout-dt description-container'>
+                <h1>Solaris News Feed</h1>
+            </section>
+            <section className='section-layout-t stick-on-scroll'>
                 <NewsFilter getFilter={activeFilter} setFilter={setActiveFilter} getTagFilter={tagFilter} setTagFilter={setTagFilter} getActiveTagFilter={tagFilterArr}/>
-            <section className='collapsable-section' data-section-id="discovery-stream-wrapper">
-                <div className="ds-layout ds-layout-breakpoint ">
+            </section>
+            <section className='non-collapsable-section section-layout-dt ds-container background-pattern' data-section-id="discovery-stream-wrapper">
+                <div className="ds-layout ds-layout-breakpoint">
                     {cardData 
                     ? cardData.map((cardData) => 
                         filterArr.length > 0 && tagFilterArr.length > 0 

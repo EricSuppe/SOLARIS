@@ -1,0 +1,8 @@
+@layer defaults {
+    section.section-layout-dt {
+        padding: 100px;
+    }
+    section.section-layout-t {
+        padding: 0;
+    }
+}

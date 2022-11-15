@@ -2,7 +2,6 @@ import Home from '../src/pages/home/Home'
 import Login from '../src/pages/login/Login'
 import News from './pages/news/News';
 import Article from './pages/article/Article';
-import '../src/App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
 import Impressum from './pages/imprint/Imprint';
@@ -10,6 +9,9 @@ import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
 import Contact from './pages/contact/Contact';
 // import Community from './pages/community/Community';
 
+import '../src/styles/App.css'
+import "../src/styles/variables.css"
+import "../src/styles/global.css"
 
 function App() {
 

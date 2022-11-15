@@ -4,7 +4,7 @@ import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 
 import { useRef, useContext } from 'react'
-import { loginCall } from '../../apiCalls'
+import { loginCall } from '../../services/apiCalls'
 import { AuthContext } from "../../context/AuthContext"
 import CircularProgress from '@mui/material/CircularProgress';
 

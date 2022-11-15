@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@layer reset, defaults, patterns, components, utilities, overrides;
+@layer reset, defaults, breakpoints, patterns, components, utilities, overrides;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,20 +7,6 @@
 @layer defaults {
     :root {
         scroll-behavior: smooth;
-    
-        --color-primary: #ff5c00;
-        --color-primary-hover: #ff5e00dc;
-       
-        --color-black: #000000;
-        --color-white: #ffffff;
-    
-        --background: #121212;
-        --background-hover: #27262698;
-       
-        --color-outline: rgb(57, 57, 57);
-    
-        --color-admin: rgb(78, 78, 212);
-        --background-admin: #1b1a1a;
     }
     * {
         font-family: "Clash Display", sans-serif;
