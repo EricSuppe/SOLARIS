@@ -7,6 +7,8 @@ import "./hot-slider-var.css"
 import "./hot-slider-content.css"
 import "./hot-slider-timeline.css"
 import { useState } from "react";
+import useTagColor from "../../hooks/useTagColor"
+import { format } from 'timeago.js'
 
 export default function Slider(props) {
 
@@ -73,7 +75,9 @@ export default function Slider(props) {
             <div className="hot-slider">
                 <div className="hot-slider__carousel">
                     <div className="hot-slider-carousel">
-                        {props.data.map((item, index) => <div key={item._id + index} className={"hot-slider-carousel__item hot-slider-carousel__item--image " + (index === 0 ? "hot-slider-carousel__item--active" : "")}>
+                        {props.data.map((item, index) => <div 
+                        key={item._id + index} 
+                        className={"hot-slider-carousel__item hot-slider-carousel__item--image " + (index === 0 ? "hot-slider-carousel__item--active" : "")}>
                             <div className="image-view">
                                 <div className="image-view-container">
                                     <img className="image-view__content" 
@@ -87,21 +91,25 @@ export default function Slider(props) {
                 <div className="hot-slider__content">
                     <div className="hot-slider-item" data-content-id={props.data[dataIndex]._id}>
                         <div className="hot-slider-item__content hot-slider-item__content--fade-in">
-                            <h2 className="hot-slider-item__tag">{props.data[dataIndex].tag.map((item) => <>{item}</>)}</h2>
+                            <h2 className="hot-slider-item__tag">{props.data[dataIndex].tag.map((item) => <span 
+                            key={item._id} style={useTagColor(item)} 
+                            className="tag hot-slider-item__tag-item">{item}</span>)}
+                                <span className="hot-slider-item__tag-date">•  {format(props.data[dataIndex].createdAt)}</span>
+                            </h2>
                             <div className="hot-slider-item__title-wrapper">
-                                <a href="">
+                                <a href={`/solaris_news/article/${props.data[dataIndex]._id}`}>
                                     <h2 className="hot-slider-item__title">{props.data[dataIndex].headline}</h2>
                                 </a>
-                                <span href="">
+                                <a href={`/solaris_news/article/${props.data[dataIndex]._id}`}>
                                     <h2 className="hot-slider-item__title--subHeading">{props.data[dataIndex].previewText}</h2>
-                                </span>
+                                </a>
                             </div>
                             <h2 className="hot-slider-item__cta">
-                                <div className="button button-clickable">
+                                <a className="button button-clickable" href={`/solaris_news/article/${props.data[dataIndex]._id}`}>
                                     <span className="button__content">
                                         <span className="button__label">Zum Artikel</span>
                                     </span>
-                                </div>
+                                </a>
                             </h2>
                         </div>
                     </div>
@@ -126,8 +134,6 @@ export default function Slider(props) {
     )
 }
 
-
 Slider.propTypes = {
     data: propTypes.array.isRequired,
 }
-

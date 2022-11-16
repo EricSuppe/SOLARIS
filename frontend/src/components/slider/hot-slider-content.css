@@ -52,6 +52,21 @@
         transform: translateX(120px);
     }
 }
+.hot-slider-item__tag-date {
+    color: rgb(146, 146, 146);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 16px;
+    opacity: 1;
+    text-shadow: 0 0 20px #000f1e33,0 0 3px #000f1e4d;
+    margin-left: 10px;
+}
+@media only screen and (min-width:650px) {
+    .hot-slider-item__tag-date {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
 .hot-slider-item__cta {
     opacity: 0;
     padding-top: 24px;

@@ -1,8 +1,9 @@
-@layer defaults {
-    section.section-layout-dont-touch {
-        padding: 100px;
-    }
-    section.section-layout-touch {
-        padding: 0;
-    }
+* {
+    font-family: "Clash Display", sans-serif;
+}
+section.section-layout-dont-touch {
+    padding: 100px;
+}
+section.section-layout-touch {
+    padding: 0;
 }
