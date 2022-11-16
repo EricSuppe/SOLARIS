@@ -1,0 +1,86 @@
+.hot-slider-timeline__items {
+    display: flex;
+    overflow: hidden;
+}
+.hot-slider-timeline__item {
+    flex-shrink: 0;
+    opacity: .2;
+    padding-right: 16px;
+    transition: opacity .3s;
+    width: 160px;
+}
+@media only screen and (max-width:649px) {
+    .hot-slider-timeline__item {
+        flex-grow: 1;
+        flex-shrink: unset;
+        padding-right: 8px;
+    }
+}
+@media only screen and (min-width:650px) {
+    .hot-slider-timeline__item {
+        width: 180px;
+    }
+}
+.hot-slider-timeline__item-content {
+    height: 100%;
+}
+@media only screen and (max-width:649px) {
+    .hot-slider-timeline__item-content {
+        padding: 20px 0;
+    }
+}
+.hot-slider-timeline__item-content:hover {
+    cursor: pointer;
+}
+.hot-slider-timeline__item--active {
+    opacity: 1;
+}
+.hot-slider-timeline__item--active .hot-slider-timeline__progress-bar {
+    background-color: var(--color-primary);
+}
+.hot-slider-timeline__item-title {
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.hot-slider-timeline__item-title {
+    display: none;
+}
+@media only screen and (min-width:650px) {
+    .hot-slider-timeline__item-title {
+        display: block;
+    }
+}
+.hot-slider-timeline__progress-bar-mask {
+    background-color: var(--color-white);
+    border-radius: 1px;
+    height: 2px;
+}
+@media only screen and (min-width:650px) {
+    .hot-slider-timeline__progress-bar-mask {
+        margin-bottom: 12px;
+    }
+}
+.hot-slider-timeline__progress-bar {
+    height: 100%;
+    transform-origin: 0;
+}
+.hot-slider-timeline--waiting .hot-slider-timeline__item--active .hot-slider-timeline__progress-bar {
+    background-color: initial;
+}
+.hot-slider-timeline--animate .hot-slider-timeline__item--active .hot-slider-timeline__progress-bar {
+    animation-delay: 0;
+    animation-duration: 4.7s;
+    animation-name: hot-slider-timeline__progress-bar;
+    animation-timing-function: linear;
+    background-color: var(--color-primary);
+}   
+@keyframes hot-slider-timeline__progress-bar {
+    0% {
+        transform:scaleX(0);
+    }
+    to {
+        transform:scaleX(1);
+    }
+}

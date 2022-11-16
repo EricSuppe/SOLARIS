@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 import NewsItemProvider from '../../components/NewsBoard/newsItemProvider/NewsItemProvider';
 import NewsOnLoadProvider from '../../components/NewsBoard/newsOnLoadProvider/NewsOnLoadProvider';
 import Footer from '../../components/footer/Footer';
-// import Navbar from '../../components/navbar/Navbar';
+import Navbar from '../../components/navbar/Navbar';
 import "./news.css"
 import NewsFilter from '../../components/newsFilter/NewsFilter';
-import Slider from '../../components/slider/Slider';
+import HotSlider from '../../components/slider/Hot-slider';
 // import { AuthContext } from '../../context/AuthContext';
 import AdminSideBar from '../../components/adminSideBar/AdminSideBar';
 
@@ -144,20 +144,20 @@ export default function News() {
     },[])
 
   return (
-    <div id='newsroot' data-root-id="newsroot">
-        {/* <Navbar/> */}
+    <main id='newsroot' data-root-id="newsroot">
+        <Navbar currentPage={"News"}/>
         <AdminSideBar tools={["sliderEditor"]} setEditMode={setEditMode}/>
         <div className='outer-wrapper'>
-            <section className="collapsible-section slider-container section-layout-t" data-section-id="newsslider">
-                {cardData ? <Slider data={[cardData[0],cardData[0],cardData[0],cardData[0], cardData[1]]}/> : null}
+            <section className="collapsible-section section-layout-touch" data-section-id="hot-slider-host">
+                {cardData ? <HotSlider data={[cardData[0],cardData[1],cardData[0],cardData[1],cardData[0], cardData[1]]}/> : null}
             </section>
-            <section className='section-layout-dt description-container'>
+            <section className='section-layout-dont-touch description-container'>
                 <h1>Solaris News Feed</h1>
             </section>
-            <section className='section-layout-t stick-on-scroll'>
+            <section className='section-layout-touch stick-on-scroll'>
                 <NewsFilter getFilter={activeFilter} setFilter={setActiveFilter} getTagFilter={tagFilter} setTagFilter={setTagFilter} getActiveTagFilter={tagFilterArr}/>
             </section>
-            <section className='non-collapsable-section section-layout-dt ds-container background-pattern' data-section-id="discovery-stream-wrapper">
+            <section className='non-collapsable-section section-layout-dont-touch ds-container background-pattern' data-section-id="discovery-stream-wrapper">
                 <div className="ds-layout ds-layout-breakpoint">
                     {cardData 
                     ? cardData.map((cardData) => 
@@ -186,6 +186,6 @@ export default function News() {
             <section className="news__bot"></section>
             <Footer/>
         </div>
-    </div>
+    </main>
   )
 }

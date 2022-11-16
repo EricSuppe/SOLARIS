@@ -1,8 +1,8 @@
 @layer defaults {
-    section.section-layout-dt {
+    section.section-layout-dont-touch {
         padding: 100px;
     }
-    section.section-layout-t {
+    section.section-layout-touch {
         padding: 0;
     }
 }

@@ -1,0 +1,94 @@
+.hot-slider-carousel {
+    background-color: var(--background-carousel);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    position: relative;
+    z-index: -1;
+}
+.hot-slider-carousel:after {
+    background: linear-gradient(0deg,#000f1e99,#000f1e00);
+    content:"";
+    height: 73%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 27%;
+    width: 100%;
+    z-index: 2;
+}
+@media only screen and (max-width:649px) {
+    @keyframes hot-slider-carousel__image-zoom {
+        0% {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.05);
+        }
+    }
+}
+@media only screen and (min-width:650px) {
+    @keyframes hot-slider-carousel__image-zoom {
+        0% {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.03);
+        }
+    }
+}
+@media only screen and (min-width:650px) {
+    .hot-slider-carousel {
+        position: relative;
+    }
+    .hot-slider-carousel:after {
+        background: linear-gradient(180deg,#000f1e00,#000f1e61 44%,#000f1eab);
+        content: "";
+        height: 50%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        z-index: 2;
+    }
+}
+.hot-slider-carousel__item {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.hot-slider-carousel__item .image-view {
+    opacity: 0;
+    transform: scale(1);
+    transform-origin: center right;
+    transition-delay: .3s;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.32,0,1,.32);
+}
+.hot-slider-carousel__item--previous {
+    opacity: 1;
+    z-index: 1;
+}
+.hot-slider-carousel__item--previous .image-view {
+    opacity: 0;
+    transform: scale(1.1);
+}
+.hot-slider-carousel__item--active {
+    opacity: 1;
+    z-index: 0;
+}
+.hot-slider-carousel__item--active .image-view {
+    opacity: 1;
+}
+.hot-slider-carousel__item--active.hot-slider-carousel__item--image,
+.hot-slider-carousel__item--previous.hot-slider-carousel__item--image {
+    animation-duration: 3.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: hot-slider-carousel__image-zoom;
+    animation-timing-function: cubic-bezier(.45,.05,.5,.95);
+}

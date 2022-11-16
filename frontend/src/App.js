@@ -12,6 +12,7 @@ import Contact from './pages/contact/Contact';
 import '../src/styles/App.css'
 import "../src/styles/variables.css"
 import "../src/styles/global.css"
+import "../src/styles/buttons/button.css"
 
 function App() {
 

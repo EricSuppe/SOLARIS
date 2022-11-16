@@ -1,0 +1,21 @@
+.image-view {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+span.image-view {
+    display: inline-block;
+    width: 100%;
+}
+.image-view__container {
+    height: calc(100% + 14px);
+    position: relative;
+    width: calc(100% + 14px);
+}
+.image-view__content {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
