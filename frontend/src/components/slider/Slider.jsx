@@ -5,6 +5,7 @@ import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 
 import '@splidejs/react-splide/css'
+import "./slide.css"
 
 export default function Slider(props) {
 
@@ -18,26 +19,40 @@ export default function Slider(props) {
     const slideDown = () => {
         setSliderPosition(current => current + 1 <= props.data.length - 1 ? current + 1 : 0);
     }
-    
+
     const autoSlide = () => {
-        !interval ? interval = setInterval(slideDown, 8000) : null;
+        !interval ? interval = setInterval(() => {
+            setTimeout(fadeOut,0);
+            setTimeout(reset,500);
+            setTimeout(fadeIn,600);
+        }, 8000) : null;
     }
 
     useEffect(() => {
         autoSlide()
-    },[])
+    },[]);
+
+    const fadeOut = () => {
+        document.getElementsByClassName("slider-content-layout")[0].classList.replace("slider-content-layout--fade-in", "slider-content-layout--fade-out")
+    }
+    const reset = () => {
+        document.getElementsByClassName("slider-content-layout")[0].classList.replace("slider-content-layout--fade-out", "slider-content-layout--reset")
+    }
+    const fadeIn = () => {
+        document.getElementsByClassName("slider-content-layout")[0].classList.replace("slider-content-layout--reset", "slider-content-layout--fade-in")
+    }
 
     return (
         <>
-            <div className="slider-content-wrapper">
-                <ul className="slider-content-layout" style={{transform: `translateX(-${(100 / props.data.length) * sliderPositon}%)`}}>
-                    {props.data ? props.data.map((item, index) => <li 
+            <div className="slider-content-layout-wrapper">
+                <div className="slider-item"></div>
+                <div className="slider-content-layout slider-content-layout--fade-in" style={{transform: `translateX(-${(100 / props.data.length) * sliderPositon}%)`}}>
+                    {props.data ? props.data.map((item, index) => <div 
                     key={index}
-                    className={"slider-content " + (sliderPositon === index ? "active" : "")}
-                    style={{backgroundImage: `url('${item.displayPicture}')`}}
-                    data-slider-content-index={index}>            
-                    </li>) : <li><CircularProgress/></li>}
-                </ul>
+                    className={"slider-content-cta"}>    
+
+                    </div>) : <div><CircularProgress/></div>}
+                </div>
             </div>
             <div className="slider-layout-wrapper">     
                 <div className="slider-layout">           
