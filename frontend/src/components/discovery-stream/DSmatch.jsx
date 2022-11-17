@@ -1,9 +1,9 @@
 import React from 'react'
 import propTypes from "prop-types";
-import "./matchResult.css"
-import Logo from "../../../../../assets/PL_Logo_white.jpg"
+import Logo from "../../assets/PL_Logo_white.jpg"
+import "./dsmatch.css"
 
-export default function MatchResult({cardData}) {
+export default function DSmatch({cardData}) {
 
     return (
         <article className='matchResult__container' title='Spieltag Ergebnis'>
@@ -39,7 +39,7 @@ export default function MatchResult({cardData}) {
     )
 }
 
-MatchResult.propTypes = {
+DSmatch.propTypes = {
     cardData: propTypes.object.isRequired,
 };
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import "./standingsCard.css"
 import propTypes from "prop-types";
+import "./dsleaderBoard.css"
 
-export default function StandingsCard({cardData}) {
+export default function DSleaderBoard({cardData}) {
 
     const [seeAll,setSeeAll] = useState(false); 
 
@@ -200,7 +200,7 @@ export default function StandingsCard({cardData}) {
     )
 }
 
-StandingsCard.propTypes = {
+DSleaderBoard.propTypes = {
     cardData: propTypes.object.isRequired,
 };
 
