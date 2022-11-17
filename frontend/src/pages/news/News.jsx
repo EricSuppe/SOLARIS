@@ -9,6 +9,7 @@ import HotSlider from '../../components/slider/Hot-slider';
 // import { AuthContext } from '../../context/AuthContext';
 import AdminSideBar from '../../components/adminSideBar/AdminSideBar';
 import DiscoveryStream from '../../components/discovery-stream/DiscoveryStream';
+import DiscoveryStreamSkeleton from '../../components/discovery-stream-skeleton/DiscoveryStreamSkeleton';
 
 export default function News() {
 
@@ -92,9 +93,8 @@ export default function News() {
             </section>
             <section className='non-collapsable-section section-layout-dont-touch ds-container background-pattern' data-section-id="discovery-stream-wrapper">
                 <div className="ds-layout ds-layout-breakpoint">
-                    {cardData 
-                    ? cardData.map((cardData, index) => 
-                        <DiscoveryStream key={cardData._id || index} dataSet={cardData}/>
+                    {cardData ? cardData.map((cardData, index) => 
+                       <DiscoveryStream key={cardData._id || index} dataSet={cardData}/>
                         // filterArr.length > 0 && tagFilterArr.length > 0 
                         //     ? cardData.tag 
                         //         ? cardData.tag.map((tag) => tagFilterArr.includes(tag)).some(values => values === true) && filterArr.includes(cardData.type)
@@ -114,7 +114,7 @@ export default function News() {
                         //         ? <NewsItemProvider cardData={cardData} editMode={editMode}/>
                         //         : null 
                         //     : <NewsItemProvider cardData={cardData} editMode={editMode}/>) 
-                    ) : null }
+                    ) : <DiscoveryStreamSkeleton/> }
                 </div>
             </section>
             <section className="news__bot"></section>
