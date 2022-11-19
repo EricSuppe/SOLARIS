@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import useTagColor from '../../hooks/useTagColor';
+import useTagColor from '../../../../hooks/useTagColor';
 import "./newsFilter.css"
 import propTypes from "prop-types";
 

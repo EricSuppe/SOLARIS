@@ -1,0 +1,48 @@
+[data-root-id="policy-center"]#policy-center-root {
+}
+.policy-center-outer-wrapper {
+    width: 100vw;
+    height: 100vh;
+    perspective:2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.policy-center__header {
+    width: 100vw;
+    height: 50vh;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.policy-center__header__container {
+    position: absolute;
+    width: 200vw;
+    height: 120vh;
+    scale: 1;
+    transform: translateZ(-2px) translateY(-20%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.policy-center__header__container--zoom {
+    scale: 1.04;
+    transition-property: scale;
+    transition-duration: 5s;
+    transition-delay: .3s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.policy-center__header__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.policy-center__navigation {
+    height: fit-content;
+    position: relative;
+    background-color: var(--background);
+}
+.policy-center__body {
+    position: relative;
+    background: black;
+}

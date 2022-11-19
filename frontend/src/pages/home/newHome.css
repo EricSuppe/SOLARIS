@@ -1,0 +1,135 @@
+.newHome {
+    background-color: rgb(0, 0, 0);
+    height: 100vw;
+}
+.newHome section {
+    z-index: 1;
+}
+.section__masked {
+    overflow: hidden;
+}
+.section__backgroundMask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.section__guides {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 16px;
+    pointer-events: none;
+}
+.section__guides__container {
+    display: grid;
+    grid: 1fr/repeat(4, 1fr);
+    position: relative;
+    max-width: var(--layoutWidthMax);
+    height: 100%;
+    margin: 0 auto;
+}
+.section__guides__guide:first-of-type,
+.section__guides__guide:last-of-type {
+    background: var(--guideSolidColor);
+    width: 1px;
+}
+.section__guides__guide {
+    width: 1px;
+    background: linear-gradient(180deg,var(--guideDashedColor),var(--guideDashedColor) 50%,transparent 0,transparent);
+    background-size: 1px 8px;
+}
+.section__guides__guide:last-of-type {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+
+
+
+.section__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center
+}
+.section__layout__container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 16px;
+}
+.section__layout {
+    padding: 116px 0;
+}
+.column__layout {
+    display: grid;
+    align-items: flex-start;
+    row-gap: 32px;
+    grid-template-columns: repeat(2,1fr);
+}
+.homepage__hero__title {
+    display: grid;
+    grid-template-columns: 1;
+}
+.hero__title__header {
+    padding: 0;
+    --max-width: 50rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+.hero__title__body {
+    padding: 0;
+    --max-width: 50rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+
+
+
+.hero {
+    position: relative;
+    isolation: isolate;
+}
+.hero__headline__container {
+    position: relative;
+    margin-top: 4rem;
+}
+.hero__headline {
+    mix-blend-mode: color-burn;
+    font-size: 87px;
+    max-width: 20ch;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #ff854d;
+}
+.hero__headline[data-overlay] {
+    mix-blend-mode: revert;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff5500;
+    z-index: 2;
+    opacity: .82;
+}
+.container {
+    padding: 0;
+    --max-width: 50rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+.canvas-container {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    height: 50vh;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%);
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}

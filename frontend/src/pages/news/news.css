@@ -55,10 +55,6 @@
     .ds-layout-breakpoint {
         grid-template-columns: repeat(6, auto);
     }
-    .ds-card-grid-space-breakpoint {
-        grid-row: auto/span 10;
-        grid-column: auto/span 2;
-    }
 }
 
 @media(min-width: 1480px) {

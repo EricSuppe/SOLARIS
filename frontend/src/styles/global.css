@@ -1,9 +1,18 @@
-* {
-    font-family: "Clash Display", sans-serif;
-}
 section.section-layout-dont-touch {
-    padding: 100px;
+    padding: 0;
+}
+@media only screen and (min-width: 650px) {
+    section.section-layout-dont-touch {
+        padding: 100px;
+    }
 }
 section.section-layout-touch {
     padding: 0;
+}
+
+.lineClamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--lineClampXSmall);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

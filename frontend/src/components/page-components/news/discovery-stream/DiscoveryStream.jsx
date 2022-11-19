@@ -1,18 +1,10 @@
 import React from 'react'
 import propTypes from "prop-types"
-import DSarticle from './DSarticle'
-import DSleaderBoard from './DSleaderBoard'
-import DSmatch from './DSmatch'
+import { DISCOVERY_STREAM_ITEM_MAP } from '../../../../Keys/Keys'
 
 export default function DiscoveryStream(props) {
-    
-    const DScomponentMap = {
-        DSarticle,
-        DSleaderBoard,
-        DSmatch,
-    }
 
-    const Component = DScomponentMap[props.dataSet.type]
+    const Component = DISCOVERY_STREAM_ITEM_MAP[props.dataSet.type]
 
     return (
         <>

@@ -7,7 +7,7 @@ import "./hot-slider-var.css"
 import "./hot-slider-content.css"
 import "./hot-slider-timeline.css"
 import { useState } from "react";
-import useTagColor from "../../hooks/useTagColor"
+import useTagColor from "../../../../hooks/useTagColor"
 import { format } from 'timeago.js'
 
 export default function Slider(props) {

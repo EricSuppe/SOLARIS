@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from "prop-types";
-import Logo from "../../assets/PL_Logo_white.jpg"
+import Logo from "../../../../assets/PL_Logo_white.jpg"
 import "./dsmatch.css"
 
 export default function DSmatch({cardData}) {
