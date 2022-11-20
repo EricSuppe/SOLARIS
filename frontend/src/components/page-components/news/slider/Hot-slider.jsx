@@ -71,67 +71,109 @@ export default function Slider(props) {
     }
 
     return (
-        <>
-            <div className="hot-slider">
-                <div className="hot-slider__carousel">
-                    <div className="hot-slider-carousel">
-                        {props.data.map((item, index) => <div 
-                        key={item._id + index} 
-                        className={"hot-slider-carousel__item hot-slider-carousel__item--image " + (index === 0 ? "hot-slider-carousel__item--active" : "")}>
-                            <div className="image-view">
-                                <div className="image-view-container">
-                                    <img className="image-view__content" 
-                                    src={item.displayPicture} alt="" 
-                                    title={item.headline}/>
-                                </div>
-                            </div>
-                        </div>)}
+      <>
+        <div className="hot-slider">
+          <div className="hot-slider__carousel">
+            <div className="hot-slider-carousel">
+              {props.data.map((item, index) => (
+                <div
+                  key={item._id + index}
+                  className={
+                    "hot-slider-carousel__item hot-slider-carousel__item--image " +
+                    (index === 0 ? "hot-slider-carousel__item--active" : "")
+                  }
+                >
+                  <div className="image-view">
+                    <div className="image-view-container">
+                      <img
+                        className="image-view__content"
+                        src={item.displayPicture}
+                        alt=""
+                        title={item.headline}
+                      />
                     </div>
+                  </div>
                 </div>
-                <div className="hot-slider__content">
-                    <div className="hot-slider-item" data-content-id={props.data[dataIndex]._id}>
-                        <div className="hot-slider-item__content hot-slider-item__content--fade-in">
-                            <h2 className="hot-slider-item__tag">{props.data[dataIndex].tag.map((item) => <span 
-                            key={item._id} style={useTagColor(item)} 
-                            className="tag hot-slider-item__tag-item">{item}</span>)}
-                                <span className="hot-slider-item__tag-date">•  {format(props.data[dataIndex].createdAt)}</span>
-                            </h2>
-                            <div className="hot-slider-item__title-wrapper">
-                                <a href={`/solaris_news/article/${props.data[dataIndex]._id}`}>
-                                    <h2 className="hot-slider-item__title">{props.data[dataIndex].headline}</h2>
-                                </a>
-                                <a href={`/solaris_news/article/${props.data[dataIndex]._id}`}>
-                                    <h2 className="hot-slider-item__title--subHeading">{props.data[dataIndex].previewText}</h2>
-                                </a>
-                            </div>
-                            <h2 className="hot-slider-item__cta">
-                                <a className="button button-clickable" href={`/solaris_news/article/${props.data[dataIndex]._id}`}>
-                                    <span className="button__content">
-                                        <span className="button__label">Zum Artikel</span>
-                                    </span>
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                    <div className="hot-slider-timeline hot-slider-timeline--animate">
-                        <div className="hot-slider-timeline__items">
-                            {props.data.map((item, index) => <div 
-                            key={item._id + index} 
-                            className={"hot-slider-timeline__item " + (index === dataIndex ? "hot-slider-timeline__item--active" : "")}
-                            onClick={() => sliderPosition = index - 1}>
-                                <div className="hot-slider-timeline__item-content">
-                                    <div className="hot-slider-timeline__progress-bar-mask">
-                                        <div className="hot-slider-timeline__progress-bar"></div>
-                                    </div>
-                                    <div className="hot-slider-timeline__item-title">{item.headline}</div>
-                                </div>
-                            </div>)}
-                        </div>
-                    </div>
-                </div>
+              ))}
             </div>
-        </>
-    )
+          </div>
+          <div className="hot-slider__content">
+            <div
+              className="hot-slider-item"
+              data-content-id={props.data[dataIndex]._id}
+            >
+              <div className="hot-slider-item__content hot-slider-item__content--fade-in">
+                <h2 className="hot-slider-item__tag">
+                  {props.data[dataIndex].tag.map((item) => (
+                    <span
+                      key={item._id}
+                      style={useTagColor(item)}
+                      className="tag hot-slider-item__tag-item"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                  <span className="hot-slider-item__tag-date">
+                    • {format(props.data[dataIndex].createdAt)}
+                  </span>
+                </h2>
+                <div className="hot-slider-item__title-wrapper">
+                  <a
+                    href={`/solaris_news/article/${props.data[dataIndex]._id}`}
+                  >
+                    <h2 className="hot-slider-item__title">
+                      {props.data[dataIndex].headline}
+                    </h2>
+                  </a>
+                  <a
+                    href={`/solaris_news/article/${props.data[dataIndex]._id}`}
+                  >
+                    <h2 className="hot-slider-item__title--subHeading">
+                      {props.data[dataIndex].previewText}
+                    </h2>
+                  </a>
+                </div>
+                <h2 className="hot-slider-item__cta">
+                  <a
+                    className="button button-clickable"
+                    href={`/solaris_news/article/${props.data[dataIndex]._id}`}
+                  >
+                    <span className="button__content">
+                      <span className="button__label">Zum Artikel</span>
+                    </span>
+                  </a>
+                </h2>
+              </div>
+            </div>
+            <div className="hot-slider-timeline hot-slider-timeline--animate">
+              <div className="hot-slider-timeline__items">
+                {props.data.map((item, index) => (
+                  <div
+                    key={item._id + index}
+                    className={
+                      "hot-slider-timeline__item " +
+                      (index === dataIndex
+                        ? "hot-slider-timeline__item--active"
+                        : "")
+                    }
+                    onClick={() => (sliderPosition = index - 1)}
+                  >
+                    <div className="hot-slider-timeline__item-content">
+                      <div className="hot-slider-timeline__progress-bar-mask">
+                        <div className="hot-slider-timeline__progress-bar"></div>
+                      </div>
+                      <div className="hot-slider-timeline__item-title">
+                        {item.headline}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
 }
 
 Slider.propTypes = {

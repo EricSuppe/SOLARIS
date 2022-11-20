@@ -1,0 +1,41 @@
+.Section.HomepageHero {
+    --sectionPaddingTopMax: 116;
+}
+@media (max-width: 899px) {
+    .Section.HomepageHero {
+        --sectionPaddingBottomMax: calc(var(--sectionPaddingNormalMax) + 40);
+    }
+}
+.Section__masked {
+    overflow: var(--sectionOverflow);
+}
+.Section__backgroundMask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: var(--sectionBackgroundOverflow);
+}
+.Section__background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--backgroundColor);
+    overflow: hidden;
+}
+.Section__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    /* min-height: var(--sectionMinumHeight); */
+}
+.Section__layoutContainer {
+    width: 100%;
+    max-width: var(--layoutWidth);
+    margin: 0 auto;
+}
+.Section__layout {
+    padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom) 0;
+}

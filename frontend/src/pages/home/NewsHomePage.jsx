@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import GuideLines from '../../components/common/guideLines/GuideLines';
+import GuideLines from '../../components/common/guideLines/Guides';
 import useStaticData from '../../hooks/useStaticData';
 import "./newHome.css"
+import "./homepage-sections.css"
 
 
 export default function NewsHomePage() {
@@ -43,40 +44,90 @@ export default function NewsHomePage() {
   }
 
   return (
-    <main className='newHome'>
-        
-      <section className="hero">
-        <div className="section__masked">
-          <div className="section__backgroundMask" data-attribute-guides>
-            <GuideLines/>
+    <main className="newHome">
+      <div className='Homepage__background'>
+        <div className="canvas-container">
+          <canvas id="canv" width="32" height="32" />
+        </div>
+      </div>
+      <div className='Homepage__middle'>
+        <div className="hero__headline__container">
+          <h1
+            className="hero__headline"
+            data-text-key="home-hero-header"
+          ></h1>
+          <p
+            className="hero__headline"
+            aria-hidden="true"
+            data-text-key="home-hero-header"
+            data-overlay
+          ></p>
+        </div>
+      </div>
+      <div className="Homepage__content">
+        <section className='landscape-transition'>
+          <div className="landscape__container">
+            <img className='landscape' src="/images/vectorpaint.svg" alt="" />
           </div>
-          <div className="section__container">
-            <div className="section__layout__container">
-              <div className="section__layout">
-                <div className="column__layout" data-columns="2,2">
-                  <section className='homepage__hero__title'>
-                    <header className='hero__title__header'>
-                       <div className="hero__headline__container">
-                        <h1 className='hero__headline' data-text-key="home-hero-header"></h1>
-                        <p className='hero__headline' aria-hidden="true" data-text-key="home-hero-header" data-overlay></p>
-                      </div>
-                    </header>
-                    <div className="hero__title__body" data-text-key="home-hero-subheading"></div>
-                    <div className="canvas-container">
-                      <canvas id="canv" width="32" height="32"/>
-                    
-                    </div>
-                  </section>
+        </section>
+        <section className="Section HomepageHero" data-section-id>
+          <div className="Section__masked">
+            <div className="Section__backgroundMask">
+              <div className="Section__background">
+                <GuideLines />
+              </div>
+            </div>
+            <div className="Section__container">
+              <div className="Section__layoutContainer">
+                <div className="Section__layout">
+                  <div className="column__layout" data-columns="2,2">
+                    {/* <section className="homepage__hero__title">
+                      <header className="hero__title__header">
+                        <div className="hero__headline__container">
+                          <h1
+                            className="hero__headline"
+                            data-text-key="home-hero-header"
+                          ></h1>
+                          <p
+                            className="hero__headline"
+                            aria-hidden="true"
+                            data-text-key="home-hero-header"
+                            data-overlay
+                          ></p>
+                        </div>
+                      </header>
+                      <div
+                        className="hero__title__body"
+                        data-text-key="home-hero-subheading"
+                      ></div>
+                    </section> */}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+      </div>
+      {/* <section className='sponsors' data-section-id>
+        <div className="Section__masked">
+          <div className="Section__backgroundMask">
+            <div className="Section__background">
+              <GuideLines/>
+            </div>
+          </div>
         </div>
       </section>
-      <section>
-
-      </section>
-        
+      <section className='sponsors' data-section-id>
+        <div className="Section__masked">
+          <div className="Section__backgroundMask">
+            <GuideLines/>
+          </div>
+        </div>
+      </section> */}
     </main>
-  )
+  );
 }
+
+// background
+// hero
+// content

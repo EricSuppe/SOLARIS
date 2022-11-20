@@ -1,0 +1,37 @@
+[data-section-id] {
+    --sectionPaddingTopGutterWidth: var(--gutterWidth);
+    /* override on 375 => sectionPaddingMin */
+    /* override on 1112 => sectionPaddingNormalMax */
+    --sectionPaddingTop: calc(var(--sectionPaddingMin)*1px + (var(--sectionPaddingTopMax) - var(--sectionPaddingMin))*(var(--windowWidth)/737 - 0.50882px));
+    /* override on 375 => sectionPaddingMin */
+    /* override on 1112 => sectionPaddingNormalMax */
+    --sectionPaddingBottom: calc(var(--sectionPaddingMin)*1px + (var(--sectionPaddingBottomMax) - var(--sectionPaddingMin))*(var(--windowWidth)/737 - 0.50882px));
+    --sectionPaddingNormalMax: 128;
+    --sectionPaddingSmallMax: 110;
+    --sectionPaddingXSmallMax: 72;
+    --sectionPaddingMin: 72;
+    --sectionPaddingMax: var(--sectionPaddingNormalMax);
+    --sectionPaddingTopMax: var(--sectionPaddingMax);
+    --sectionPaddingBottomMax: var(--sectionPaddingMax);
+    --sectionMarginBottom: 0;
+    --sectionOverflow: hidden;
+    --sectionTransformOrigin: 100% 0;
+    --sectionBackgroundOverflow: visible;
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--sectionMarginBottom);
+    color: var(--textColor);
+    scroll-margin-top: calc(var(--fixedNavHeight) + var(--fixedNavSpacing) - var(--sectionPaddingTop));
+}
+@media (min-width: 375px) {
+    [data-section-id] {
+        --sectionPaddingTop: calc(var(--sectionPaddingMin)*1px);
+        --sectionPaddingBottom: calc(var(--sectionPaddingMin)*1px);
+    }
+}
+@media (min-width: 1112px) {
+    [data-section-id] {
+        --sectionPaddingTop: calc(var(--sectionPaddingTopMax)*1px);
+        --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax)*1px);
+    }
+}

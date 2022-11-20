@@ -107,48 +107,80 @@ export default function News() {
     },[])
 
   return (
-    <main id='newsroot' data-root-id="newsroot">
-        {/* <Navbar currentPage={"News"}/> */}
-        <AdminSideBar tools={["sliderEditor"]} setEditMode={false}/>
-        <div className='outer-wrapper'>
-            <section className="collapsible-section section-layout-touch" data-section-id="hot-slider-host">
-                {cardData ? <HotSlider data={[cardData[0],cardData[1],cardData[2],cardData[3],cardData[4],cardData[5]]}/> : null}
-            </section>
-            <section className='section-layout-dont-touch description-container'>
-                <h1>Solaris News Feed</h1>
-            </section>
-            <section className='section-layout-touch stick-on-scroll'>
-                <NewsFilter getFilter={activeFilter} setFilter={setActiveFilter} getTagFilter={tagFilter} setTagFilter={setTagFilter} getActiveTagFilter={tagFilterArr}/>
-            </section>
-            <section className='non-collapsable-section section-layout-dont-touch ds-container background-pattern' data-section-id="discovery-stream-wrapper">
-                <div className="ds-layout ds-layout-breakpoint">
-                    {cardData ? cardData.map((cardData, index) => 
-                        <DiscoveryStream key={cardData._id || index} dataSet={cardData}/>
-                        // filterArr.length > 0 && tagFilterArr.length > 0 
-                        //     ? cardData.tag 
-                        //         ? cardData.tag.map((tag) => tagFilterArr.includes(tag)).some(values => values === true) && filterArr.includes(cardData.type)
-                        //             ? <NewsItemProvider cardData={cardData} editMode={editMode}/> 
-                        //             : null
-                        //         : null
-                        //     :
-                        // filterArr.length == 0 && tagFilterArr.length > 0 
-                        //     ? cardData.tag  
-                        //         ? cardData.tag.map((tag) => tagFilterArr.includes(tag)).some(values => values === true)
-                        //             ? <NewsItemProvider cardData={cardData} editMode={editMode}/>
-                        //             : null
-                        //         : null 
-                        //     :             
-                        // filterArr.length > 0 && tagFilterArr.length == 0 
-                        //     ? filterArr.includes(cardData.type) 
-                        //         ? <NewsItemProvider cardData={cardData} editMode={editMode}/>
-                        //         : null 
-                        //     : <NewsItemProvider cardData={cardData} editMode={editMode}/>) 
-                    ) : <DiscoveryStreamSkeleton/> }
-                </div>
-            </section>
-            <section className="news__bot"></section>
-            <Footer/>
-        </div>
+    <main id="newsroot" data-root-id="newsroot">
+      {/* <Navbar currentPage={"News"}/> */}
+      <AdminSideBar tools={["sliderEditor"]} setEditMode={false} />
+      <div className="outer-wrapper">
+        <section
+          className="collapsible-section section-layout-touch"
+          data-section-id="hot-slider-host"
+        >
+          {cardData ? (
+            <HotSlider
+              data={[
+                cardData[0],
+                cardData[1],
+                cardData[2],
+                cardData[3],
+                cardData[4],
+                cardData[5],
+              ]}
+            />
+          ) : null}
+        </section>
+        <section className="section-layout-dont-touch description-container">
+          <h1>Solaris News Feed</h1>
+        </section>
+        <section className="section-layout-touch stick-on-scroll">
+          <NewsFilter
+            getFilter={activeFilter}
+            setFilter={setActiveFilter}
+            getTagFilter={tagFilter}
+            setTagFilter={setTagFilter}
+            getActiveTagFilter={tagFilterArr}
+          />
+        </section>
+        <section
+          className="non-collapsable-section section-layout-dont-touch ds-container background-pattern"
+          data-section-id="discovery-stream-wrapper"
+        >
+          <div className="ds-layout ds-layout-breakpoint">
+            {cardData ? (
+              cardData.map(
+                (cardData, index) => (
+                  <DiscoveryStream
+                    key={cardData._id || index}
+                    dataSet={cardData}
+                  />
+                )
+                // filterArr.length > 0 && tagFilterArr.length > 0
+                //     ? cardData.tag
+                //         ? cardData.tag.map((tag) => tagFilterArr.includes(tag)).some(values => values === true) && filterArr.includes(cardData.type)
+                //             ? <NewsItemProvider cardData={cardData} editMode={editMode}/>
+                //             : null
+                //         : null
+                //     :
+                // filterArr.length == 0 && tagFilterArr.length > 0
+                //     ? cardData.tag
+                //         ? cardData.tag.map((tag) => tagFilterArr.includes(tag)).some(values => values === true)
+                //             ? <NewsItemProvider cardData={cardData} editMode={editMode}/>
+                //             : null
+                //         : null
+                //     :
+                // filterArr.length > 0 && tagFilterArr.length == 0
+                //     ? filterArr.includes(cardData.type)
+                //         ? <NewsItemProvider cardData={cardData} editMode={editMode}/>
+                //         : null
+                //     : <NewsItemProvider cardData={cardData} editMode={editMode}/>)
+              )
+            ) : (
+              <DiscoveryStreamSkeleton />
+            )}
+          </div>
+        </section>
+        <section className="news__bot"></section>
+        <Footer />
+      </div>
     </main>
-  )
+  );
 }

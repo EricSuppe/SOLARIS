@@ -1,7 +1,11 @@
 html {
     --gutterWidth: 16px;
-    --scrollbarWidth: 0px;
+    /* scrollbar width */
+    --scrollbarWidth: 17px;
+    /* width of the window */
     --windowWidth: calc(100vw - var(--scrollbarWidth));
+    /* width of the content layout (left guide-line to right guide-line) */
+    /* override on 1112px => layoutWidthMax */
     --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth)*2);
     --layoutWidthMax: 1080px;
     --viewportWidthSmall: 375;
@@ -12,6 +16,7 @@ html {
     --paddingBottom: 160px;
     --columnPaddingNone: 0;
     --columnPaddingSmall: 8px;
+    /*  */
     --columnPaddingNormal: 16px;
     --columnPaddingMedium: 16px;
     --columnPaddingLarge: 16px;
@@ -22,6 +27,8 @@ html {
     --rowGapXLarge: 64px;
     --rowGapXXLarge: 88px;
     --rowGap: var(--rowGapNormal);
+    /* maximum number of columns in the guides grid */
+    /* override  */
     --columnCountMax: 1;
     --columnWidth: calc(var(--layoutWidth)/var(--columnCountMax));
     --columnMaxWidth: calc(var(--layoutWidthMax)*0.25);
@@ -35,7 +42,7 @@ html {
   
     
 }
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
     html {
         --columnPaddingMedium: 32px;
         --columnPaddingLarge: 64px;
@@ -43,13 +50,13 @@ html {
         --columnCountMax: 2;
     }
 }
-@media only screen and (min-width: 900px) {
+@media (min-width: 900px) {
     html {
         --columnPaddingXLarge: 112px;
         --columnCountMax: 4;
     }
 }
-@media only screen and (min-width: 1112px) {
+@media (min-width: 1112px) {
     html {
         --layoutWidth: var(--layoutWidthMax);
         --gutterWidth: calc(var(--windowWidth)/2 - var(--layoutWidth)/2);
@@ -83,6 +90,7 @@ html {
     --fixedNavScrollMargin: calc(var(--fixedNavHeight) + var(--fixedNavSpacing));
     --hoverTransition: 150ms cubic-bezier(0.215,0.61,0.355,1);
     --focusBoxShadow: 0 0 0 2px #4d90fe,inset 0 0 0 2px hsla(0,0%,100%,0.9);
+    box-sizing: border-box;
 }
 
 body {
@@ -129,8 +137,8 @@ body {
     --knockoutDisabledColor: #8898aa;
     --guideSolidColor: rgba(158, 158, 158, 0.233);
     --guideDashedColor: rgba(158, 158, 158, 0.255);
-    --titleColor: #0a2540;
-    --textColor: #425466;
+    --titleColor: #ffffff;
+    --textColor: #ffffff;
     --inputBackground: #e6ebf1;
     --inputPlaceholderColor: #8898aa;
     --inputTextColor: #0a2540;

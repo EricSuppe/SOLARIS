@@ -10,6 +10,7 @@ import '../src/styles/App.css'
 import "../src/styles/variables.css"
 import "../src/styles/global.css"
 import "../src/styles/buttons/button.css"
+import "../src/styles/common/section.css"
 
 function App() {
 
@@ -17,61 +18,25 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route 
-            exact 
-            path="/" 
-            element={
-              <Home/>
-            } 
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/solaris_news" element={<News />} />
+          <Route exact path="/solaris_news/article/:id" element={<Article />} />
+          <Route
+            exact
+            path="/impressum"
+            element={<PolicyCenter renderComponent={"imprint"} />}
           />
-          <Route 
-            exact 
-            path="/login" 
-            element={
-              <Login/>
-            } 
-          />
-          <Route 
-            exact 
-            path="/solaris_news" 
-            element={
-              <News/>
-            } 
-          />
-          <Route 
-            exact 
-            path="/solaris_news/article/:id" 
-            element={
-              <Article/>
-            } 
-          />
-          <Route 
-            exact 
-            path="/impressum" 
-            element={
-              <PolicyCenter 
-                renderComponent={"imprint"}
-              />
-            }
-          />
-          <Route 
-            exact 
+          <Route
+            exact
             path="/datenschutz"
-            element={
-              <PolicyCenter 
-                renderComponent={"privacy"}
-              />
-            }
+            element={<PolicyCenter renderComponent={"privacy"} />}
           />
-          <Route 
-            exact 
-            path="/kontakt" 
-            element={
-            <PolicyCenter 
-              renderComponent={"contact"}
-            />
-          }
-        />
+          <Route
+            exact
+            path="/kontakt"
+            element={<PolicyCenter renderComponent={"contact"} />}
+          />
         </Routes>
       </Router>
     </>
