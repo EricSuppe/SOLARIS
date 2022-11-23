@@ -6,6 +6,8 @@ import { createRoot } from 'react-dom/client';
 const root = createRoot(document.getElementById('root')); 
 root.render(
     <AuthContextProvider>
-        <App />
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
     </AuthContextProvider>
 );

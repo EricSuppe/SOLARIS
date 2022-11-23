@@ -1,11 +1,3 @@
-.Section.HomepageHero {
-    --sectionPaddingTopMax: 116;
-}
-@media (max-width: 899px) {
-    .Section.HomepageHero {
-        --sectionPaddingBottomMax: calc(var(--sectionPaddingNormalMax) + 40);
-    }
-}
 .Section__masked {
     overflow: var(--sectionOverflow);
 }
@@ -34,8 +26,26 @@
 .Section__layoutContainer {
     width: 100%;
     max-width: var(--layoutWidth);
-    margin: 0 auto;
+    margin: 0 var(--columnPaddingNormal);
 }
 .Section__layout {
     padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom) 0;
+}
+[data-guide-top]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,var(--accentColor),var(--accentColor) 50%,transparent 0,transparent);
+    background-size: 8px 1px;
+}
+[data-guide-bottom]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,var(--accentColor),var(--accentColor) 50%,transparent 0,transparent);
+    background-size: 8px 1px;
 }

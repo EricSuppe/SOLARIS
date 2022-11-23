@@ -1,18 +1,12 @@
-section.section-layout-dont-touch {
-    padding: 0;
-}
-@media only screen and (min-width: 650px) {
-    section.section-layout-dont-touch {
-        padding: 100px;
-    }
-}
-section.section-layout-touch {
-    padding: 0;
-}
-
 .lineClamp {
     display: -webkit-box;
     -webkit-line-clamp: var(--lineClampXSmall);
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+[data-pattern-type-raster] {
+    background-size: var(--backgroundSize);
+    background-image: var(--backgroundImageRaster);
+    background-repeat: repeat;
 }

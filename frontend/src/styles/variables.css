@@ -33,14 +33,23 @@ html {
     --columnWidth: calc(var(--layoutWidth)/var(--columnCountMax));
     --columnMaxWidth: calc(var(--layoutWidthMax)*0.25);
     --copyMaxWidth: calc(var(--columnMaxWidth)*3);
-
+    /* number of lines before clamp */
     --lineClampXSmall: 2;
     --lineClampSmall: 3;
     --lineClampMedium: 4;
     --lineClampLarge: 5;
     --lineClampxLarge: 6;
-  
-    
+    /* sets the raster size of the background */
+    --backgroundSizeMin: 15px 15px, 45px 45px;
+    --backgroundSizeScale: 2vw 2vw, 6vw 6vw;
+    --backgroundSizeMax: 33px 33px, 99px 99px;
+    /* always have 24 repeats in x-direction */
+    --backgroundSizeKeep25: calc(var(--windowWidth) / 75) calc(var(--windowWidth) / 75), calc(var(--windowWidth) / 25) calc(var(--windowWidth) / 25);
+    --backgroundSize: var(--backgroundSizeMin);
+    /* transitions */
+    --transitionShort: 200ms;
+    --transitionMedium: 300ms;
+    --transitionLong: 400ms;
 }
 @media (min-width: 600px) {
     html {
@@ -54,17 +63,22 @@ html {
     html {
         --columnPaddingXLarge: 112px;
         --columnCountMax: 4;
+        --backgroundSize: var(--backgroundSizeScale);
     }
 }
 @media (min-width: 1112px) {
     html {
         --layoutWidth: var(--layoutWidthMax);
         --gutterWidth: calc(var(--windowWidth)/2 - var(--layoutWidth)/2);
+        --backgroundSize: var(--backgroundSizeMax);
     }
 }
 
 :root {
-    --fontFamily: "Clash Display",sans-serif;
+    /* static colors */
+    --backgroundRasterColor: rgba(37, 37, 37, 0.308);
+    /* static values */
+    --fontFamily: "Clash Display", sans-serif;
     --fontWeightLight: 200;
     --fontWeightNormal: 300;
     --fontWeightSemibold: 425;
@@ -90,6 +104,13 @@ html {
     --fixedNavScrollMargin: calc(var(--fixedNavHeight) + var(--fixedNavSpacing));
     --hoverTransition: 150ms cubic-bezier(0.215,0.61,0.355,1);
     --focusBoxShadow: 0 0 0 2px #4d90fe,inset 0 0 0 2px hsla(0,0%,100%,0.9);
+    /* sets the background image to display the raster */
+    --backgroundImageRaster: 
+    linear-gradient(to bottom, transparent 5px, transparent 5px), 
+    linear-gradient(to right, var(--backgroundRasterColor) 1px, transparent 1px), 
+    linear-gradient(to right, transparent 5px, transparent 5px), 
+    linear-gradient(to bottom, var(--backgroundRasterColor) 1px, transparent 1px);
+    
     box-sizing: border-box;
 }
 
@@ -104,7 +125,9 @@ body {
 }
 
 .flavor--Primary {
+    /* primary color palettes */
     --accentColor: #ff5c00;
+    --accentColorOpacityLow: #ff5e0048;
     --guideBackground: #e65400;
     --guideDarkColor: #a83e00;
     --guideLightColor: #ff7b2e;
@@ -114,19 +137,20 @@ body {
 }
 
 .theme--dark {
+    /* dark theme color palettes */
     --color-primary: #ff5c00;
     --color-primary-hover: #ff5e00dc;
     --color-black: #000000;
     --color-white: #ffffff;
     --color-admin: rgb(78, 78, 212);
     --color-outline: rgb(57, 57, 57);
-    --color-guides: rgba(65, 64, 64, 0.534);
     
     --background: #121212;
     --background-hover: #27262698;
     --background-admin: #1b1a1a;
 
     --backgroundColor: #121212;
+    --backgroundColorLighter: #2525252f;
     --linkColor: var(--accentColor);
     --linkHoverColor: #0a2540;
     --buttonColor: var(--accentColor);
@@ -135,10 +159,12 @@ body {
     --buttonDisabledOpacity: 0.7;
     --knockoutColor: #fff;
     --knockoutDisabledColor: #8898aa;
-    --guideSolidColor: rgba(158, 158, 158, 0.233);
-    --guideDashedColor: rgba(158, 158, 158, 0.255);
+    --guideSolidColor: rgba(97, 97, 97, 0.233);
+    --guideDashedColor: rgba(97, 97, 97, 0.255);
+    --guideDashedColorOpacityLow: rgba(97, 97, 97, 0.13);
     --titleColor: #ffffff;
     --textColor: #ffffff;
+    --textColorLighter: rgb(68, 68, 68);
     --inputBackground: #e6ebf1;
     --inputPlaceholderColor: #8898aa;
     --inputTextColor: #0a2540;

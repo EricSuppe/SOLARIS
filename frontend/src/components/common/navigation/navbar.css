@@ -1,0 +1,100 @@
+.SiteHeader {
+    z-index: 100;
+    position: relative;
+    overflow: hidden;
+}
+.SiteHeader.variant--Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--windowWidth);
+}
+.SiteHeader.theme--transparent .SiteHeader__contentWrapper {
+    background: none;
+}
+.SiteHeader.theme--blurr .SiteHeader__contentWrapper {
+    backdrop-filter: blur(20px);
+    background: none;
+}
+.SiteHeader.guides--disabled .SiteHeader__guidesContainer {
+    display: none;
+}
+.SiteHeader__contentWrapper {
+    width: 100%;
+    background-color: var(--backgroundColor);
+}
+.SiteHeader__guidesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.SiteHeader__container {
+    position: relative;
+    max-width: calc(var(--columnPaddingNormal)*2 + var(--layoutWidth));
+    margin: 0 auto;
+    padding: 0 var(--columnPaddingNormal);
+}
+.SiteHeader__navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    padding: 32px var(--columnPaddingNormal);
+}
+@media (min-width: 900px) {
+    .SiteHeader__navContainer {
+        padding: 12px var(--columnPaddingNormal);
+    }
+}
+.SiteHeader__logo {
+    margin: 0;
+}
+.SiteHeaderNav__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.SiteHeaderNavItem__link {
+    display: block;
+    padding: 10px 20px;
+    letter-spacing: .2px;
+    color: var(--navColor);
+    border: none;
+    outline: none;
+    font-size: 27px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+.SiteHeader__ctaNav {
+    display: initial;
+}
+.SiteHeader__ctaNav__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.SiteHeader__ctaNavItem {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.SiteHeader__horizontalGuideLine {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,var(--guideDashedColor),var(--guideDashedColor) 50%,transparent 0,transparent);
+    background-size: 8px 1px;
+}
+.SiteHeader.guides--disabled .SiteHeader__horizontalGuideLine {
+    display: none;
+}

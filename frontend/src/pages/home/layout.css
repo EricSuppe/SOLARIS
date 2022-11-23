@@ -1,0 +1,33 @@
+.RowLayout {
+    --rowLayoutGapNone: 0px;
+    --rowLayoutGapXSmall: 16px;
+    --rowLayoutGapSmall: 24px;
+    --rowLayoutGapNormal: 32px;
+    --rowLayoutGapMedium: var(--rowLayoutGapNormal);
+    --rowLayoutGapLarge: var(--rowLayoutGapNormal);
+    --rowLayoutGapXLarge: var(--rowLayoutGapNormal);
+    --rowLayoutGap: var(--rowLayoutGapLarge);
+    display: grid;
+    row-gap: var(--rowLayoutGap);
+    align-items: flex-start;
+}
+@media (min-width: 600px) {
+    .RowLayout {
+        --rowLayoutGapMedium: 48px;
+        --rowLayoutGapLarge: var(--rowLayoutGapMedium);
+        --rowLayoutGapXLarge: var(--rowLayoutGapMedium);
+    }
+}
+@media (min-width: 900px) {
+    .RowLayout {
+        --rowLayoutGapLarge: 64px;
+        --rowLayoutGapXLarge: 96px;
+    }
+}
+
+.ColumnLayout {
+    --columnRowGap: var(--rowGapLarge);
+    display: grid;
+    row-gap: var(--columnRowGap);
+    align-items: flex-start;
+}

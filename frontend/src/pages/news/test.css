@@ -1,0 +1,82 @@
+.Newspage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    perspective: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.NewspageCanvas__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+}
+.NewspageCanvas__container canvas {
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+}
+.NewspageCanvas__container .canvas__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: #ff5e007c;
+}
+.Newspage__hero {
+    position: absolute;
+    left: 0;
+    top:-25vh;
+    transform-style: preserve-3d;
+    width: 100vw;
+    transform: translateZ(-2px) scale(2);
+    height: 100vh;
+}
+.Newspage__background__container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-5px) scale(3.55);   
+}
+.Newspage__content {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+.Newspage__landscape-transition {
+    width: 100%;
+    height: 85vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+.Newspage__landscape__container {
+    width: 120%;
+    left: -10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Newspage__landscape {
+    width: 110%;
+}
+.Newspage__landscape:first-of-type {
+    margin-top: 15vh;
+}
+.Newspage__landscape:last-of-type {
+    margin-top: 60vh;
+}
+.Newspage__sliderWrapper {
+    position: absolute;
+    left: calc((var(--windowWidth) - var(--layoutWidth))/2);
+    width: var(--layoutWidth);
+    margin: 0 auto;
+    height: 800px;
+    background-color: var(--backgroundColor);
+}
