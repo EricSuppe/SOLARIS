@@ -1,30 +1,32 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense } from 'react'
 import useStaticData from '../../hooks/useStaticData';
+import Spinner from "../transition/Spinner"
 import "./homepage.css"
 import "./homepage-sections.css"
 import "./layout.css"
 import Navbar from '../../components/common/navigation/Navbar';
 import 'boxicons'
 import { lazy } from 'react';
-import { CircularProgress } from '@mui/material';
 import News from './sections/news/News';
+import Landing from './sections/landing/Landing';
 const Intro = lazy(() => import("./sections/intro/Intro"))
 const Sponsors = lazy(() => import("./sections/sponsors/Sponsors"))
 const Team = lazy(() => import("./sections/team/Team"))
-import CanvasShade from '../../scripts/CanvasShade';
 
 export default function NewsHomePage() {
   
-  useEffect(() => {
-    useStaticData();
-    CanvasShade();
-  },[]);
+  useStaticData();
+
 
   return (
     <>
-      <Navbar variant={"Overlay"} guides={"disabled"} theme={"transparent"}/>
+      <Navbar variant={"Overlay"} guides={"enabled"} theme={"transparent"}/>
       <main className="Homepage">
-        <div className='Homepage__hero'>
+
+        <Suspense fallback={<Spinner type={"linear"}/>}>
+          <Landing/>
+        </Suspense>
+        {/* <div className='Homepage__hero'>
           <div className="Hero__headline__container">
             <h1
               className="Hero__headline"
@@ -42,23 +44,23 @@ export default function NewsHomePage() {
             <div className="Canvas__background"></div>
           </div>
         </div>
-        <div className="Hero__background__container" data-pattern-type-raster></div>
+        <div className="Hero__background__container" data-pattern-type-raster></div> */}
         <div className="Homepage__content">
-          <section className='Landscape-transition'>
+          {/* <section className='Landscape-transition'>
             <div className="Landscape__container">
               <img className='Landscape' src="/images/vectorpaint.svg" alt="" />
             </div>
-          </section>
-          <Suspense fallback={<CircularProgress/>}>
+          </section> */}
+          <Suspense fallback={<Spinner type={"linear"}/>}>
             <Intro/>
           </Suspense>
-          <Suspense fallback={<CircularProgress/>}>
+          <Suspense fallback={<Spinner type={"linear"}/>}>
             <Sponsors/>
           </Suspense>
-          <Suspense fallback={<CircularProgress/>}>
+          <Suspense fallback={<Spinner type={"linear"}/>}>
             <Team/>
           </Suspense>
-          <Suspense fallback={<CircularProgress/>}>
+          <Suspense fallback={<Spinner type={"linear"}/>}>
             <News/>
           </Suspense>
         </div>

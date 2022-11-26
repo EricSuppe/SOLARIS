@@ -126,7 +126,7 @@ body {
 
 .flavor--Primary {
     /* primary color palettes */
-    --accentColor: #ff5c00;
+    --accentColor: rgb(255, 92, 0);
     --accentColorOpacityLow: #ff5e0048;
     --guideBackground: #e65400;
     --guideDarkColor: #a83e00;

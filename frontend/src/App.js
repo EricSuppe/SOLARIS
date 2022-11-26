@@ -1,18 +1,18 @@
-import PageLoadingTransition from "./pages/transition/PageLoadingTransition"
-const Home = lazy(() => import("./pages/home/Homepage"))
-const News = lazy(() => import("./pages/news/Test"))
-const Login = lazy(() => import("./pages/login/Login"))
-const Article = lazy(() => import("./pages/article/Article"))
-const PolicyCenter = lazy(() => import("./pages/policy-center/PolicyCenter"))
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { lazy, Suspense } from 'react';
 import { CircularProgress } from '@mui/material';
+import React, { lazy, Suspense } from 'react';
 import '../src/styles/App.css'
 import "../src/styles/variables.css"
 import "../src/styles/global.css"
 import "../src/styles/buttons/button.css"
 import "../src/styles/common/section.css"
 import "../src/styles/common/hover-effects.css"
+import PageLoadingTransition from "./pages/transition/PageLoadingTransition"
+const Home = lazy(() => import("./pages/home/Homepage"))
+const News = lazy(() => import("./pages/news/Test"))
+const Login = lazy(() => import("./pages/login/Login"))
+const Article = lazy(() => import("./pages/article/Article"))
+const PolicyCenter = lazy(() => import("./pages/policy-center/PolicyCenter"))
 
 function App() {
 

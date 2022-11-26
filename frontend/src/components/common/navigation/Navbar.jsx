@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import GuideLines from '../guideLines/Guides'
 import "./navbar.css"
 import 'boxicons'
-import useEffectOnce from '../../../hooks/useEffectOnce'
 import useStaticData from '../../../hooks/useStaticData'
 import propTypes from "prop-types"
 
 export default function Navbar(props) {
 
-    useEffectOnce(() => useStaticData())
+    useStaticData();
 
     return (
         <header className={`SiteHeader variant--${props.variant} guides--${props.guides} theme--${props.theme}`}>
@@ -22,19 +21,19 @@ export default function Navbar(props) {
                         <nav className="SiteHeaderNav">
                             <ul className="SiteHeaderNav__list">
                                 <li className='SiteHeaderNavItem'>
-                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="hompage-link" href='/'></a>
+                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="hompage-link" href='/'>Startseite</a>
                                 </li>
                                 <li className='SiteHeaderNavItem'>
-                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="news-link" href='/news'></a>
+                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="news-link" href='/news'>Neuigkeiten</a>
                                 </li>
                                 <li className='SiteHeaderNavItem'>
-                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="about-link"></a>
+                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="about-link">Über uns</a>
                                 </li>
                                 <li className='SiteHeaderNavItem'>
-                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="team-link"></a>
+                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="team-link">Team</a>
                                 </li>
                                 <li className='SiteHeaderNavItem'>
-                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="community-link"></a>
+                                    <a className="SiteHeaderNavItem__link" data-hover-theme-key="0" data-text-key="community-link">Community</a>
                                 </li>
                             </ul>
                         </nav>
