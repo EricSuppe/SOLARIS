@@ -28,24 +28,12 @@
     max-width: var(--layoutWidth);
     margin: 0 var(--columnPaddingNormal);
 }
+.Section__layoutContainer--wide {
+    max-width: 1500px;
+}
+.Section__layoutContainer--full {
+    max-width: 100%;
+}
 .Section__layout {
     padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom) 0;
-}
-[data-guide-top]::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg,var(--accentColor),var(--accentColor) 50%,transparent 0,transparent);
-    background-size: 8px 1px;
-}
-[data-guide-bottom]::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg,var(--accentColor),var(--accentColor) 50%,transparent 0,transparent);
-    background-size: 8px 1px;
 }

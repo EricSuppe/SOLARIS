@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Navbar from '../../components/navbar/Navbar'
+// import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 
 import { useRef, useContext } from 'react'
@@ -27,7 +27,7 @@ export default function Login() {
 
     return (
         <>
-            <Navbar currentPage={"Login"}/>
+            {/* <Navbar currentPage={"Login"}/> */}
             <main className="relative w-screen h-screen overflow-x-hidden overflow-y-auto bg-black perspective background-pattern">
                 <section className='realtive w-full h-full flex items-center justify-center'>
                     <form onSubmit={handleClick} className="flex flex-col">

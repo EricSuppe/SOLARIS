@@ -24,10 +24,14 @@
         --rowLayoutGapXLarge: 96px;
     }
 }
-
 .ColumnLayout {
     --columnRowGap: var(--rowGapLarge);
     display: grid;
-    row-gap: var(--columnRowGap);
     align-items: flex-start;
+    grid: auto/repeat(var(--columnCountMax),1fr);
+}
+.FlexLayout {
+    display: flex;
+    flex-direction: row;
+    padding: 0 var(--columnPaddingNormal);
 }

@@ -17,7 +17,18 @@ Section.HomepageLanding {
     align-items: center;
     justify-content: center;
 }
+.CanvasBaseLayer__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(7,7,7,0.7203081916360294) 18%, rgba(14,14,14,0.1516807406556373) 54%, rgba(19,19,19,0.09565833169205185) 65%, rgba(18,18,18,0.04523816362482491) 77%, rgba(19,19,19,0) 93%, rgba(20,20,20,0) 100%);
+}
 .SubHeading__container {
+    position: absolute;
     width: var(--layoutWidth);
     margin: 0 auto;
     margin-top: 400px;

@@ -7,7 +7,7 @@ html {
     /* width of the content layout (left guide-line to right guide-line) */
     /* override on 1112px => layoutWidthMax */
     --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth)*2);
-    --layoutWidthMax: 1080px;
+    --layoutWidthMax: 1250px;
     --viewportWidthSmall: 375;
     --viewportWidthMedium: 600;
     --viewportWidthLarge: 1112;
@@ -50,6 +50,8 @@ html {
     --transitionShort: 200ms;
     --transitionMedium: 300ms;
     --transitionLong: 400ms;
+    
+    scroll-behavior:smooth
 }
 @media (min-width: 600px) {
     html {
@@ -62,7 +64,7 @@ html {
 @media (min-width: 900px) {
     html {
         --columnPaddingXLarge: 112px;
-        --columnCountMax: 4;
+        --columnCountMax: 3;
         --backgroundSize: var(--backgroundSizeScale);
     }
 }
@@ -78,7 +80,7 @@ html {
     /* static colors */
     --backgroundRasterColor: rgba(37, 37, 37, 0.308);
     /* static values */
-    --fontFamily: "Clash Display", sans-serif;
+    --fontFamily: "ClashDisplay-Bold", sans-serif;
     --fontWeightLight: 200;
     --fontWeightNormal: 300;
     --fontWeightSemibold: 425;
@@ -150,7 +152,9 @@ body {
     --background-admin: #1b1a1a;
 
     --backgroundColor: #121212;
-    --backgroundColorLighter: #2525252f;
+    --backgroundColorMedium: rgba(48, 47, 47, 0.192);
+    --backgroundColorLighter: hsla(0, 1%, 19%, 0.4);
+   
     --linkColor: var(--accentColor);
     --linkHoverColor: #0a2540;
     --buttonColor: var(--accentColor);

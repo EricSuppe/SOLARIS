@@ -25,7 +25,9 @@ export default function Landing() {
         <section className='Section HomepageLanding' data-section-id="landing" data-js-target-script="pixel-grid-event-cover">
             <Suspense fallback={<CircularProgress/>}>
                 <div className="CanvasGrid__container">
-                    <canvas id='canvas-pixel-grid' data-js-target-script="base-grid"></canvas>
+                        <img className='CanvasBaseLayer__image' src="/images/senna.jpg" alt="" />
+                    <canvas id='canvas-pixel-grid' data-js-target-script="base-grid">
+                    </canvas>
                     <canvas id="canvas-pixel-grid" data-js-target-script="pixel-grid-layer-1"></canvas>
                     <canvas id="canvas-pixel-grid" data-js-target-script="pixel-grid-layer-2"></canvas>
                     <canvas id="canvas-pixel-grid" data-js-target-script="pixel-grid-layer-3"></canvas>

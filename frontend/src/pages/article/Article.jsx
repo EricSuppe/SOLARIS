@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Footer from '../../components/footer/Footer'
-import Navbar from '../../components/navbar/Navbar'
+// import Navbar from '../../components/navbar/Navbar'
 import { format } from "timeago.js"
 import "./article.css"
 
@@ -25,7 +25,7 @@ export default function Article() {
 
   return (
     <>
-      <Navbar currentPage={"Article"}/>
+      {/* <Navbar currentPage={"Article"}/> */}
       {news ? <main className='article'>
         <section className='head' style={{backgroundImage: news.displayPicture}}>
           {/* <span>{news.headline}</span> */}

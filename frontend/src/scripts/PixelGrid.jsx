@@ -7,32 +7,32 @@ function PixelGrid(props) {
     let adjustX = props.startX;
     let adjustY = 10;
     let color = "#ff5c00"
-    let strokeColor = "#ff5c00"
+    // let strokeColor = "#ff5c00"
     let highPerformanceMode = props.highPerformanceMode
 
-    const fps = 30;
+    const fps = 60;
 
     const a = 2 * Math.PI / 6;
 
-    const mouse = {
-        x: null,
-        y: null,
-        radius: 0,
-    }
+    // const mouse = {
+    //     x: null,
+    //     y: null,
+    //     radius: 0,
+    // }
 
-    const useEventlistener = () => {
-        mouse.radius = 250
-        highPerformanceMode && document.querySelector('[data-js-target-script="pixel-grid-event-cover"]').addEventListener("mousemove", function(event){
-            mouse.x = event.x;
-            mouse.y = event.y;
-        })
-    }
-    window.setTimeout(useEventlistener,10000)
+    // const useEventlistener = () => {
+    //     mouse.radius = 250
+    //     highPerformanceMode && document.querySelector('[data-js-target-script="pixel-grid-event-cover"]').addEventListener("mousemove", function(event){
+    //         mouse.x = event.x;
+    //         mouse.y = event.y;
+    //     })
+    // }
+    // window.setTimeout(useEventlistener,10000)
 
 
 
     // scroll update mouse position
-    ctx.font = "700 30px Clash Display";
+    ctx.font = "30px ClashDisplay-Bold";
  
     ctx.fillText(`${props.letter}`, 0, 40); //0, 40
     const textCoordinates = ctx.getImageData(0, 0, 40, 40);//0,0,40,40
@@ -57,33 +57,33 @@ function PixelGrid(props) {
             ctx.fill();
         }
         update() {
-            let dx = mouse.x - this.x;
-            let dy = mouse.y - this.y;
-            let distance = Math.sqrt(dx*dx + dy*dy);
-            let forceDirectionX = dx/distance;
-            let forceDirectionY = dy/distance;
-            let maxDistance = mouse.radius;
-            let force = (maxDistance - distance)/maxDistance;
-            let directionX = forceDirectionX * force * this.density;
-            let directionY = forceDirectionY * force * this.density;
-            if(distance < mouse.radius) {
-                this.x -= directionX;
-                this.y -= directionY;
-            } else {
+            // let dx = mouse.x - this.x;
+            // let dy = mouse.y - this.y;
+            // let distance = Math.sqrt(dx*dx + dy*dy);
+            // let forceDirectionX = dx/distance;
+            // let forceDirectionY = dy/distance;
+            // let maxDistance = mouse.radius;
+            // let force = (maxDistance - distance)/maxDistance;
+            // let directionX = forceDirectionX * force * this.density;
+            // let directionY = forceDirectionY * force * this.density;
+            // if(distance < mouse.radius) {
+            //     this.x -= directionX;
+            //     this.y -= directionY;
+            // } else {
                 let dx = this.x - this.baseX;
                 let dy = this.y - this.baseY;
                 if(this.x !== this.baseX) {
-                    this.x -= dx/25;
+                    this.x -= dx/20;
                 }
                 if(this.y !== this.baseY) {
-                    this.y -= dy/25;
+                    this.y -= dy/20;
                 }
                 if(highPerformanceMode && (this.y !== this.baseY || this.x != this.baseX)) {
                     let distance = Math.sqrt(dx*dx+dy*dy)
                     let opacity = 1 - distance/100
                     this.color = "rgb(255, 92, 0," + opacity + ")"
                 }
-            }
+            // }
         }
     }
 
@@ -110,6 +110,8 @@ function PixelGrid(props) {
     }
     init();
 
+    let startTime = Date.now()
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for(let i = 0; i < particleArray.length; i++) {
@@ -121,10 +123,10 @@ function PixelGrid(props) {
         }
         connect();
         setTimeout(() => {
-            if(highPerformanceMode) requestAnimationFrame(animate);
+            if(highPerformanceMode && Date.now() - startTime < 10000) requestAnimationFrame(animate);
         }, 1000 / fps);
     }
-    window.setTimeout(animate,100);
+    window.setTimeout(animate,500);
 
     function connect() {
         for(let a = 0; a < particleArray.length; a++) {

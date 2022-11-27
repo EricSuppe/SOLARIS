@@ -7,7 +7,7 @@ import "./hot-slider-var.css"
 import "./hot-slider-content.css"
 import "./hot-slider-timeline.css"
 import { useState } from "react";
-import useTagColor from "../../../../hooks/useTagColor"
+// import useTagColor from "../../../../hooks/useTagColor"
 import { format } from 'timeago.js'
 
 export default function Slider(props) {
@@ -22,7 +22,7 @@ export default function Slider(props) {
     const [dataIndex,setDataIndex] = useState(0);
     
     const autoSlide = () => {
-        !interval ? interval = setInterval(() => {
+        if(!interval) interval = setInterval(() => {
             setTimeout(definePrevious,0)
             setTimeout(setActive,0)
             setTimeout(fadeOut,0);
@@ -30,14 +30,15 @@ export default function Slider(props) {
             setTimeout(reset,600);
             setTimeout(fadeIn,700);
             setTimeout(setDefault,2000);
-        }, 5000) : null;
+            console.log("first")
+        }, 5000)
     }
 
     const autoSetSliderPositon = () => {
-        !interval2 ? interval2 = setInterval(() => {
+        if(!interval2) interval2 = setInterval(() => {
             sliderPosition = sliderPosition + 1 <= props.data.length - 1 ? sliderPosition + 1 : 0
             setTimeout(stepData,500)
-        }, 5000) : null
+        }, 5000)
     }
 
     useEffect(() => {
@@ -107,7 +108,7 @@ export default function Slider(props) {
                   {props.data[dataIndex].tag.map((item) => (
                     <span
                       key={item._id}
-                      style={useTagColor(item)}
+                      // style={useTagColor(item)}
                       className="tag hot-slider-item__tag-item"
                     >
                       {item}

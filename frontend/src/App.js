@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CircularProgress } from '@mui/material';
 import React, { lazy, Suspense } from 'react';
-import '../src/styles/App.css'
 import "../src/styles/variables.css"
-import "../src/styles/global.css"
-import "../src/styles/buttons/button.css"
 import "../src/styles/common/section.css"
 import "../src/styles/common/hover-effects.css"
+import "../src/styles/quickScroll.css"
+import "../src/styles/fonts/clash-display.css"
 import PageLoadingTransition from "./pages/transition/PageLoadingTransition"
 const Home = lazy(() => import("./pages/home/Homepage"))
 const News = lazy(() => import("./pages/news/Test"))

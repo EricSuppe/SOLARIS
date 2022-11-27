@@ -4,9 +4,6 @@ function BaseGrid() {
 
     // colors
     var color = "red";
-    var lineColor = "red"
-    var opacity = 1
-    var dotColor = "red"
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -20,13 +17,8 @@ function BaseGrid() {
 
     // arrays
     var crosses = [];
-    var lines = [];
     var sumcols = Math.ceil(canvas.width/dx);
     var sumrows = Math.ceil(canvas.height/dy);
-
-    // scaling
-    var crossScalesX = 100 // range from 0 to scaleNum
-    var crossScalesY = 100 // range from 0 to scaleNum
 
     function initCrosses() {
         crosses = new Array(sumcols);
@@ -90,39 +82,39 @@ function BaseGrid() {
         }
     }
 
-    function drawLines(x,y,dx,dy,color){
-        this.x = x;
-        this.y = y;
-        this.dx = dx;
-        this.dy = dy;
-        this.color = color;
+    // function drawLines(x,y,dx,dy,color){
+    //     this.x = x;
+    //     this.y = y;
+    //     this.dx = dx;
+    //     this.dy = dy;
+    //     this.color = color;
         
-        this.draw = () => {
-            ctx.strokeStyle = lineColor
-            ctx.lineWidth = 1;
-            ctx.setLineDash([5, 15])
-            ctx.beginPath();
-            ctx.moveTo(x + dx/2, y)
-            ctx.lineTo(x + dx/2, y + dy/2);
-            ctx.stroke();
-            ctx.closePath();
-            ctx.beginPath();
-            ctx.moveTo(x + dx, y + dy/2)
-            ctx.lineTo(x + dx/2, y + dy/2);
-            ctx.stroke();
-            ctx.closePath();
-            ctx.beginPath();
-            ctx.moveTo(x + dx/2, y + dy)
-            ctx.lineTo(x + dx/2, y + dy/2);
-            ctx.stroke();
-            ctx.closePath();
-            ctx.beginPath();
-            ctx.moveTo(x, y + dy/2)
-            ctx.lineTo((x + dx/2), y + dy/2);
-            ctx.stroke();
-            ctx.closePath();
-        }
-    }
+    //     this.draw = () => {
+    //         ctx.strokeStyle = lineColor
+    //         ctx.lineWidth = 1;
+    //         ctx.setLineDash([5, 15])
+    //         ctx.beginPath();
+    //         ctx.moveTo(x + dx/2, y)
+    //         ctx.lineTo(x + dx/2, y + dy/2);
+    //         ctx.stroke();
+    //         ctx.closePath();
+    //         ctx.beginPath();
+    //         ctx.moveTo(x + dx, y + dy/2)
+    //         ctx.lineTo(x + dx/2, y + dy/2);
+    //         ctx.stroke();
+    //         ctx.closePath();
+    //         ctx.beginPath();
+    //         ctx.moveTo(x + dx/2, y + dy)
+    //         ctx.lineTo(x + dx/2, y + dy/2);
+    //         ctx.stroke();
+    //         ctx.closePath();
+    //         ctx.beginPath();
+    //         ctx.moveTo(x, y + dy/2)
+    //         ctx.lineTo((x + dx/2), y + dy/2);
+    //         ctx.stroke();
+    //         ctx.closePath();
+    //     }
+    // }
 }
 
 export default BaseGrid

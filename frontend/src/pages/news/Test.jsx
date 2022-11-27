@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Navbar from '../../components/common/navigation/Navbar'
+// import Navbar from '../../components/common/navigation/Navbar'
 import "./test.css"
 
 export default function Test() {
@@ -39,7 +39,7 @@ export default function Test() {
 
     return (
         <>
-            <Navbar variant={"Overlay"} guides={"disabled"} theme={"transparent"}/>
+            {/* <Navbar variant={"Overlay"} guides={"disabled"} theme={"transparent"}/> */}
             <main className="Newspage">
                 <div className='Newspage__hero'>
                     <div className="NewspageCanvas__container">

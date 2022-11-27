@@ -36,6 +36,8 @@
     max-width: calc(var(--columnPaddingNormal)*2 + var(--layoutWidth));
     margin: 0 auto;
     padding: 0 var(--columnPaddingNormal);
+    display: flex;
+    flex-direction: column;
 }
 .SiteHeader__navContainer {
     display: flex;
@@ -51,6 +53,7 @@
 }
 .SiteHeader__logo {
     margin: 0;
+    align-self: baseline;
 }
 .SiteHeaderNav__list {
     display: flex;
@@ -61,18 +64,60 @@
 }
 .SiteHeaderNavItem__link {
     display: block;
-    padding: 10px 20px;
+    padding: 5px 20px;
     letter-spacing: .2px;
-    color: var(--navColor);
     border: none;
     outline: none;
     font-size: 27px;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+    color: var(--textColor)
+}
+.SiteHeaderSubNavContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.SiteHeaderSubNav__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+.SiteHeaderSubNavItem__link {
+    display: block;
+    padding: 5px 20px;
+    letter-spacing: .1px;
+    color: gray;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+.SiteHeaderSubNav__socialsList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding: 0 20px;
+}
+.SiteHeaderSubNavSocialsItem {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SiteHeaderSubNavSocialsItem__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .SiteHeader__ctaNav {
-    display: initial;
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
 }
 .SiteHeader__ctaNav__list {
     display: flex;
@@ -88,6 +133,10 @@
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
+}
+.SiteHeader__subPathing {
+    display: flex;
+    flex-direction: column;
 }
 .SiteHeader__horizontalGuideLine {
     width: 100%;
