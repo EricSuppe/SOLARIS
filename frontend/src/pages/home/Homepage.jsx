@@ -11,8 +11,9 @@ import { lazy } from 'react';
 import News from './sections/news/News';
 import Landing from './sections/landing/Landing';
 import QuickScroll from '../../components/common/navigation/quickScroll/QuickScroll';
+import NextEvent from './sections/nextEvent/NextEvent';
 const ScrollIndex = lazy(() => import('../../components/common/navigation/scrollIndex/ScrollIndex'))
-const Intro = lazy(() => import("./sections/intro/Intro"))
+const Slider = lazy(() => import("./sections/slider/Slider"))
 const Sponsors = lazy(() => import("./sections/sponsors/Sponsors"))
 const Team = lazy(() => import("./sections/team/Team"))
 
@@ -38,7 +39,8 @@ export default function NewsHomePage() {
         <Suspense fallback={<div style={{width: "40px", height: "40px"}}><Spinner type={"linear"}/></div>}>
           <Landing/>
           <Sponsors/>
-          <Intro/>
+          <Slider/>
+          <NextEvent/>
           <News/>
           <Team/>
         </Suspense>

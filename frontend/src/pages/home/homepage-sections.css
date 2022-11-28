@@ -36,6 +36,9 @@
     margin: 0;
     max-width: 2000px;
 }
+.Section__layoutContainer--cover {
+    margin: 0;
+}
 .Section__layout {
     padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom) 0;
 }

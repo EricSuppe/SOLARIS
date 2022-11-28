@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
-import "./intro.css"
+import "./slider.css"
 import GuideLines from '../../../../components/common/guideLines/Guides'
 const HotSlider = lazy(() => import("../../../../components/slider/Hot-slider"));
 import Spinner from '../../../transition/Spinner';
@@ -54,7 +54,7 @@ export default function Intro() {
         </div>
         <div className="Section__container">
           <div className="Section__layoutContainer Section__layoutContainer--full">
-            <div className="Section__layout ColumnLayout IntroGrid">
+            <div className="Section__layout ColumnLayout SliderGrid">
               <div className="Slider__container">
                 {cardData ? (
                   <Suspense fallback={<Spinner type={"linear"} />}>

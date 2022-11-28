@@ -1,7 +1,6 @@
 import { CircularProgress } from '@mui/material'
 import React, { Suspense } from 'react'
 import { useEffect } from 'react'
-import "./canvas.css"
 import "./landing.css"
 import PixelGrid from "../../../../scripts/PixelGrid"
 import BaseGrid from '../../../../scripts/BaseGrid'
