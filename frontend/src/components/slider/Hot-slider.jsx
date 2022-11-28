@@ -146,30 +146,34 @@ export default function Slider(props) {
                 </h2>
               </div>
             </div>
-            <div className="hot-slider-timeline hot-slider-timeline--animate">
-              <div className="hot-slider-timeline__items">
-                {props.data.map((item, index) => (
-                  <div
-                    key={item._id + index}
-                    className={
-                      "hot-slider-timeline__item " +
-                      (index === dataIndex
-                        ? "hot-slider-timeline__item--active"
-                        : "")
-                    }
-                    onClick={() => (sliderPosition = index - 1)}
-                  >
-                    <div className="hot-slider-timeline__item-content">
-                      <div className="hot-slider-timeline__progress-bar-mask">
-                        <div className="hot-slider-timeline__progress-bar"></div>
-                      </div>
-                      <div className="hot-slider-timeline__item-title">
-                        {item.headline}
-                      </div>
+          </div>
+          <div className="hot-slider__timeline hot-slider-timeline--animate">
+            <div className="hot-slider-timeline__items">
+              {props.data.map((item, index) => (
+                <div
+                  key={item._id + index}
+                  className={
+                    "hot-slider-timeline__item " +
+                    (index === dataIndex
+                      ? "hot-slider-timeline__item--active"
+                      : "")
+                  }
+                  onClick={() => (sliderPosition = index - 1)}
+                >
+                  {/* <div className="hot-slider-timeline__item-content">
+                    <div className="hot-slider-timeline__item-title">
+                    {item.headline}
                     </div>
+                  </div> */}
+                  <div className="hot-slider__timeline__itemContainer">
+                    <img className="hot-slider__timelineBackground" src={item.displayPicture} alt="" />
+                    <div className="hot-slider-timeline__progress-bar-mask">
+                      <div className="hot-slider-timeline__progress-bar"></div>
+                    </div>
+
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

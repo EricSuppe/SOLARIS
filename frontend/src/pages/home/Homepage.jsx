@@ -23,17 +23,20 @@ export default function NewsHomePage() {
   return (
     <>
       <Helmet>
-        <title>Solaris Homepage</title>
-        <meta name="description" content="Solaris Esports Website Homepage."/>
-        <meta name="theme-color" content="#ff5c00"/>
+        <title>Solaris Esports Homepage</title>
+        <meta name="description" content="Solaris Esports Website Homepage." />
+        <meta name="theme-color" content="#ff5c00" />
       </Helmet>
-      <Suspense fallback={<div style={{width: "40px", height: "40px"}}><Spinner type={"linear"}/></div>}>
-        <ScrollIndex/>
-      </Suspense>
-      <Navbar variant={"Overlay"} guides={"enabled"} theme={"transparent"} path={"available"}/>
+      <ScrollIndex />
+      <Navbar
+        variant={"Overlay"}
+        guides={"enabled"}
+        theme={"transparent"}
+        path={"available"}
+      />
       <main id="scroll-index-target" className="Homepage">
-        <Suspense fallback={<Spinner type={"linear"}/>}>
-          <Landing/>     
+        <Suspense fallback={<div style={{width: "40px", height: "40px"}}><Spinner type={"linear"}/></div>}>
+          <Landing/>
           <Sponsors/>
           <Intro/>
           <News/>

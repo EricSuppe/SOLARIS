@@ -1,6 +1,6 @@
 .Section.HomepageIntro {
     --sectionPaddingTopMax: 0;
-    --sectionPaddingBottomMax: 0;
+    --sectionPaddingBottomMax: 50;
 }
 @media (max-width: 899px) {
     .Section.HomepageIntro {
@@ -15,8 +15,6 @@
 }
 .Slider__container {
     grid-column: auto/span var(--columnCountMax);
-    background-color: var(--backgroundColorLighter);
-    height: 80vh;
+    height: 100vh;
     width: 100%;
-    /* mask-image: linear-gradient(90deg,transparent,#000 80px,#000 calc(100% - 80px),transparent); */
 }

@@ -35,7 +35,7 @@ function PixelGrid(props) {
     ctx.font = "30px ClashDisplay-Bold";
  
     ctx.fillText(`${props.letter}`, 0, 40); //0, 40
-    const textCoordinates = ctx.getImageData(0, 0, 40, 40);//0,0,40,40
+    const textCoordinates = ctx.getImageData(0, 0, 140, 40);//0,0,40,40
 
     class Particle {
         constructor(x, y, baseX, baseY) {
@@ -121,32 +121,32 @@ function PixelGrid(props) {
             }
             !highPerformanceMode && particleArray[i].draw();
         }
-        connect();
+        // connect();
         setTimeout(() => {
             if(highPerformanceMode && Date.now() - startTime < 10000) requestAnimationFrame(animate);
         }, 1000 / fps);
     }
     window.setTimeout(animate,500);
 
-    function connect() {
-        for(let a = 0; a < particleArray.length; a++) {
-            for(let b = a; b < particleArray.length; b++) {
-                let dx = particleArray[a].x - particleArray[b].x;
-                let dy = particleArray[a].y - particleArray[b].y;
-                let distance = Math.sqrt(dx*dx+dy*dy);
-                let opactiy = 1 - distance/50
+    // function connect() {
+    //     for(let a = 0; a < particleArray.length; a++) {
+    //         for(let b = a; b < particleArray.length; b++) {
+    //             let dx = particleArray[a].x - particleArray[b].x;
+    //             let dy = particleArray[a].y - particleArray[b].y;
+    //             let distance = Math.sqrt(dx*dx+dy*dy);
+    //             let opactiy = 1 - distance/50
 
-                if(distance < 17) {
-                    ctx.strokeStyle = "rgb(255, 92, 0," + opactiy + ")";
-                    ctx.lineWidth = 2;
-                    ctx.beginPath();
-                    ctx.moveTo(particleArray[a].x, particleArray[a].y);
-                    ctx.lineTo(particleArray[b].x, particleArray[b].y);
-                    ctx.stroke();
-                }
-            }
-        }
-    }
+    //             if(distance < 17) {
+    //                 ctx.strokeStyle = "rgb(255, 92, 0," + opactiy + ")";
+    //                 ctx.lineWidth = 2;
+    //                 ctx.beginPath();
+    //                 ctx.moveTo(particleArray[a].x, particleArray[a].y);
+    //                 ctx.lineTo(particleArray[b].x, particleArray[b].y);
+    //                 ctx.stroke();
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 export default PixelGrid

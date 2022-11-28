@@ -6,7 +6,8 @@
 }
 @media only screen and (min-width:650px) {
     .hot-slider-item {
-        padding-bottom: 32px;
+        padding-bottom: 16px;
+        padding-left: 16px;
     }
 }
 .hot-slider-item__content {

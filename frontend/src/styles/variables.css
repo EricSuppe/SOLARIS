@@ -43,6 +43,10 @@ html {
     --backgroundSizeMin: 15px 15px, 45px 45px;
     --backgroundSizeScale: 2vw 2vw, 6vw 6vw;
     --backgroundSizeMax: 33px 33px, 99px 99px;
+
+    --backgroundSizeSmall: 5px 5px, 15px 15px;
+    --backgroundSizeMdium: 10px 10px, 30px 30px;
+    --backgroundSizeLarge: var(--backgroundSizeMin);
     /* always have 24 repeats in x-direction */
     --backgroundSizeKeep25: calc(var(--windowWidth) / 75) calc(var(--windowWidth) / 75), calc(var(--windowWidth) / 25) calc(var(--windowWidth) / 25);
     --backgroundSize: var(--backgroundSizeMin);
@@ -112,9 +116,9 @@ html {
     linear-gradient(to right, var(--backgroundRasterColor) 1px, transparent 1px), 
     linear-gradient(to right, transparent 5px, transparent 5px), 
     linear-gradient(to bottom, var(--backgroundRasterColor) 1px, transparent 1px);
-    
     box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
@@ -135,7 +139,12 @@ body {
     --guideLightColor: #ff7b2e;
     --guideLighterColor: #ff8b48;
     --guideLightestColor: #ffa570;
-
+    
+    --backgroundImageRasterAccent: 
+    linear-gradient(to bottom, transparent 5px, transparent 5px), 
+    linear-gradient(to right, var(--accentColor) 1px, transparent 1px), 
+    linear-gradient(to right, transparent 5px, transparent 5px), 
+    linear-gradient(to bottom, var(--accentColor) 1px, transparent 1px);
 }
 
 .theme--dark {
