@@ -24,8 +24,8 @@ export default function NewsHomePage() {
     <>
       <Helmet>
         <title>Solaris Homepage</title>
-        <meta name="description" content="Solaris Esports Website Homepage." />
-        <meta name="theme-color" content="#ff5c00" />
+        <meta name="description" content="Solaris Esports Website Homepage."/>
+        <meta name="theme-color" content="#ff5c00"/>
       </Helmet>
       <Suspense fallback={<div style={{width: "40px", height: "40px"}}><Spinner type={"linear"}/></div>}>
         <ScrollIndex/>
